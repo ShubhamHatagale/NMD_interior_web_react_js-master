@@ -1,0 +1,422 @@
+.about-content-section {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  justify-content: space-between;
+  align-items: center;
+  height: 110vh;
+  -webkit-transition: background-color 400ms linear;
+  -moz-transition: background-color 400ms linear;
+  -o-transition: background-color 400ms linear;
+  -ms-transition: background-color 400ms linear;
+  transition: background-color 400ms linear;
+}
+
+.about-right-image {
+  position: relative;
+  right: 0;
+  top: 5vh;
+}
+
+.about-right-image img {
+  width: 100%;
+  height: 90vh;
+  filter: grayscale(100%); /* Set image to black and white */
+  transition: filter 0.3s ease-in-out; /* Add smooth transition effect */
+}
+
+.about-right-image img:hover {
+  filter: grayscale(0%); /* Set image to full color on hover */
+}
+
+.about-content-text-wrapper {
+  padding: 150px 0px 0px 50px;
+}
+
+.about-content-title {
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  text-transform: uppercase;
+}
+
+.about-content-text-wrapper h4 {
+  font-size: 3vw;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-weight: 400;
+  width: 100%;
+}
+
+.about-content-title-cur {
+  font-family: "Rockybilly";
+  color: #fff;
+  font-size: 5vw;
+  text-transform: capitalize;
+  display: block;
+}
+
+.about-content-text-wrapper p {
+  color: #fff;
+  /* padding: 80px 0px; */
+  font-size: 18px;
+  position: absolute;
+  z-index: 9999;
+  width: 60%;
+  top: 80vh;
+}
+
+.about-right-img-1 {
+  position: absolute;
+  top: 130px;
+  left: 25vw;
+}
+
+.about-right-img-1 img {
+  height: 35vh;
+  border-radius: 100%;
+}
+
+.about-title-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0px;
+}
+
+.about-title-wrapper {
+  width: 50%;
+  text-align: center;
+}
+
+.about-msg-title {
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  text-transform: uppercase;
+}
+
+.about-title-wrapper h4 {
+  font-size: 4vw;
+  font-weight: 400;
+}
+
+.about-title-wrapper h4 {
+  font-size: 7vw;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -8px;
+}
+
+.about-msg-title-cur {
+  font-family: "Rockybilly";
+  color: #000;
+  font-size: 4vw;
+  text-transform: capitalize;
+  display: block;
+}
+
+.about-title-section p {
+  margin-top: 70px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflowing text */
+  background: #fdf5e6;
+}
+
+.text-wrapper {
+  width: 100%; /* Take up full width of container */
+  position: relative;
+}
+
+.left-to-right,
+.right-to-left {
+  position: absolute;
+  white-space: nowrap; /* Prevent text from wrapping */
+  height: 100px;
+}
+
+.text-wrapper h1 {
+  text-transform: uppercase;
+  font-size: 14vw;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+.left-to-right {
+  animation: leftToRight 5s linear infinite; /* Add left to right animation */
+}
+
+.right-to-left {
+  animation: rightToLeft 5s linear infinite; /* Add right to left animation */
+  bottom: 0; /* Position text at the bottom of the container */
+}
+
+@keyframes leftToRight {
+  from {
+    left: -100%; /* Start text from the left edge of the container */
+  }
+  to {
+    left: 100%; /* Move text to the right edge of the container */
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    right: -100%; /* Start text from the right edge of the container */
+  }
+  to {
+    right: 100%; /* Move text to the left edge of the container */
+  }
+}
+
+.about-know-how-section {
+  height: 60vh;
+  background: #110a06;
+  padding-bottom: 300px;
+  padding-top: 5%;
+}
+
+.about-know-flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 22px 100px;
+  background: #110a06;
+}
+
+.about-know-title-flex {
+  width: 40%;
+}
+.about-know-title-flex img {
+  height: 70vh;
+  width: 100%;
+}
+
+.about-know-text-flex {
+  /* margin-top: 11%; */
+  width: 50%;
+  /* padding-left: 50px; */
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-know-text-flex div p {
+  margin-bottom: 30px;
+  text-align: justify;
+  color: #fff;
+}
+
+.about-title-flex h2 {
+  line-height: 1;
+  font-weight: 500;
+}
+
+.about-know-title {
+  text-transform: uppercase;
+  font-weight: 450;
+  font-size: 6rem;
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+  text-transform: uppercase;
+  /* margin-left: 30%; */
+  position: relative;
+  left: 32%;
+}
+
+.about-know-links-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-know-links-container div hr {
+  margin: 10px 0px;
+  color: #000;
+  background: #000;
+  height: 1px;
+}
+
+.about-know-links-container div h4 {
+  font-size: 1.5vw;
+  font-weight: 400;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-section1 {
+  margin-top: 5%;
+}
+
+@media (max-width: 768px) {
+  .about-section1 {
+    margin-top: 10%;
+  }
+
+  .about-content-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-right-img-1 img {
+    display: none;
+  }
+
+  .about-content-text-wrapper {
+    padding: 150px 0px 0px 0px;
+  }
+
+  .about-content-text-wrapper h4 {
+    font-size: 15vw;
+  }
+
+  .about-content-title-cur {
+    position: absolute;
+    z-index: 999;
+    font-size: 15vw;
+  }
+  .about-right-image img {
+    margin-top: 90px;
+  }
+
+  .about-content-text-wrapper p {
+    width: 70%;
+    top: 60vh;
+    text-align: justify;
+  }
+  .about-title-wrapper {
+    width: 90%;
+  }
+
+  .about-title-wrapper h4 {
+    font-size: 20vw;
+    letter-spacing: -5px;
+  }
+
+  .about-title-section {
+    padding: 400px 0px 100px 0px;
+  }
+
+  .about-msg-title-cur {
+    font-size: 15vw;
+    margin-top: 40px;
+  }
+
+  .text-wrapper h1 {
+    font-size: 40vw;
+  }
+
+  .about-know-flex-container {
+    padding: 0px 20px;
+    flex-direction: column;
+  }
+  .about-know-title {
+    font-size: 8vw;
+  }
+
+  .about-know-title-flex img {
+    height: 100vh;
+    width: 120vh;
+  }
+  .about-know-title-flex {
+    width: auto;
+  }
+  .about-know-text-flex {
+    width: auto;
+    margin-top: 70px;
+  }
+  .about-know-links-container div h4 {
+    font-size: 6vw;
+  }
+  .about-know-how-section {
+    height: 100%;
+    padding-bottom: 0px;
+  }
+}
+
+
+
+
+.the_way_we_work .containers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+.the_way_we_work .responsive-div {
+    flex: 1 1 14%;
+    margin: 10px;
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    text-align: center;
+    font-size: 12px;
+    color: white;
+  }
+
+  .the_way_we_work div h2 {
+    text-transform: uppercase;
+    font-weight: 450;
+    font-size: 3rem;
+    font-family: var(--neue) !important;
+    background: linear-gradient(
+      271deg,
+      rgba(230, 182, 151, 1) 0%,
+      rgba(173, 120, 86, 1) 5%,
+      rgba(122, 74, 46, 1) 10%,
+      rgba(181, 127, 92, 1) 50%,
+      rgba(230, 182, 151, 1) 100%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+    text-transform: uppercase;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .the_way_we_work .responsive-div {
+        flex-basis: 100%;
+    }
+  }
+
+  

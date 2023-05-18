@@ -1,0 +1,281 @@
+.viewport {
+    margin: 0 0 0 0;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    will-change: transform;
+  }
+
+/* Navigation Bar Style */
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    z-index: 99999;
+}
+
+.nav-logo {
+    padding: 0px 20px;
+}
+
+.nav-logo svg {
+    height: 50px;
+}
+
+.nav-menu-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu-section div {
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu-section div button {
+    background: none;
+    border: none;
+}
+
+.nav-menu-section div button svg {
+    display: block;
+    height: 30px;
+    width: 100px;
+    margin-top: 5px;
+    stroke: #945F3D;
+}
+
+.nav-button {
+    
+}
+
+
+footer {
+    padding: 40px 30px;
+}
+
+.footer-conatiner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-copyright {
+    text-align: left;
+}
+
+.footer-credit {
+    text-align: center;
+}
+
+.footer-social {
+    text-align: right;
+}
+
+.footer-social ul {
+    list-style: none;
+    display: flex;
+    text-align: right;
+    float: right;
+}
+
+.footer-social ul li {
+    font-size: 24px;
+    margin: 0px 20px;
+}
+
+
+/* Navigation section */
+
+.main-nav-section {
+    height: 100vh;
+}
+
+.navigation-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 200px 150px 10px 150px;
+
+}
+
+.navigation-details {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 40%;
+    position: fixed;
+}
+
+.navigation-details div h2 { 
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0px;
+    color: #945F3D;
+}
+
+.navigation-details div p { 
+    font-size: 16px;
+    font-weight: 300;
+    padding: 2px 0px;
+    opacity: 0.7;
+    color: #fff;
+    width: 60%;
+}
+
+.navigation-links-wrapper {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+}
+
+.navigation-links-wrapper ul{
+    list-style: none;
+    color: #fff;
+}
+
+.navigation-links-wrapper ul li {
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 480;
+    font-size: 7.5vw;
+    letter-spacing: 0px;
+    font-family: var(--neue) !important;
+    background: linear-gradient(271deg, rgba(230, 182, 151, 1) 0%, rgba(173, 120, 86, 1) 5%, rgba(122, 74, 46, 1) 10%, rgba(181, 127, 92, 1) 50%, rgba(230, 182, 151, 1) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+}
+
+
+/* Talk to us section */
+
+.talk-us-section {
+    background-color: none;
+    padding: 200px 0px 30px 0px;
+}
+
+.talk-title-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.talk-title-container h2 {
+    position: relative;
+    right: 100px;
+    top: 170px;
+    transform-origin: 0 0;
+    transform: rotate(-10deg);
+}
+
+.talk-title {
+    font-weight: 450;
+    font-size: 6vw;
+    background: linear-gradient(271deg, rgba(230, 182, 151, 1) 0%, rgba(173, 120, 86, 1) 5%, rgba(122, 74, 46, 1) 10%, rgba(181, 127, 92, 1) 50%, rgba(230, 182, 151, 1) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+    font-family: 'Rockybilly';
+}
+
+.talk-text-cur {
+    position: relative;
+    top: 20px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+    text-underline-offset: 8px;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+        padding: 10px 10px;
+    }
+    .nav-logo {
+        padding: 0px 10px;
+    }
+
+    .nav-logo img {
+        height: 35px;
+    }
+    .nav-menu-section div button svg {
+        height: 30px;
+        width: 70px;
+        margin-top: 0px;
+    }
+
+
+    .navigation-section {
+        flex-direction: column-reverse;
+        padding: 100px 30px;
+    }
+
+    .navigation-details {
+        width: auto;
+        position: relative;
+        margin-top: 50px;
+    }
+    .navigation-links-wrapper {
+        width: auto;
+        position: relative;
+        left: auto;
+    }
+    .navigation-links-wrapper ul li {
+        font-size: 16vw;
+    }
+
+    .talk-title-container h2 {
+        right: 15px;
+    }
+    .talk-title {
+        font-size: 10vw;
+    }
+    .talk-text-cur {
+        top: 20vh;
+    }
+    .footer-conatiner {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-copyright {
+        margin: 5px 0px;
+    }
+    .footer-credit p{
+        margin: 5px 0px;
+    }
+    .footer-social{
+        margin: 10px 0px;
+    }
+    footer {
+        padding: 20px 10px;
+    }
+ }

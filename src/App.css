@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #110A06;
+  overflow-x: hidden;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #110A06;
+  background: #f1f1f1;
+}
+
+::selection {
+  color: #110A06;
+  background: #f1f1f1;
+}
+
+*:focus {
+  outline: none;
+}
+
+.page-appear,
+.page-enter {
+  opacity: 0;
+}
+.page-enter-active,
+.page-appear-active {
+  opacity: 1;
+  transition: opacity 1s;
+}
+.page-exit {
+  opacity: 1;
+}
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 1s;
+}

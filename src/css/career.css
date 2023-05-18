@@ -1,0 +1,343 @@
+.career-container {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+
+}
+.career-title-container {
+    margin-top: 200px;
+}
+.career-bg-img {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+    right: 5vw;
+    top: 20vh;
+    bottom: 10vh;
+}
+
+.career-bg-img img {
+    flex-shrink: 0;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%
+}
+
+.career-form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20% 100px 0px 0px;
+
+
+}
+
+.career-title-container {
+    margin: 50px 0px;
+    width: 60vw;
+}
+
+.career-title-container p {
+    color: #fff;
+    font-size: 21px;
+    margin: 0px 6px;
+    text-transform: capitalize;
+}
+
+.career-title-container h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 5vw;
+    line-height: 1;
+    font-family: var(--neue) !important;
+    background: linear-gradient(271deg, rgba(230, 182, 151, 1) 0%, rgba(173, 120, 86, 1) 5%, rgba(122, 74, 46, 1) 10%, rgba(181, 127, 92, 1) 50%, rgba(230, 182, 151, 1) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+    text-transform: uppercase;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+}
+
+.form-container-block div{
+    display: flex;
+    flex-direction: column;
+}
+.form-container-block1 div{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container-block div input {
+    background: none;
+    margin: 20px 20px 20px 0px;
+    border: none;
+    padding: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+}
+
+.form-container-block1 div input {
+    background: none;
+    margin: 20px 0px 20px 20px;
+    border: none;
+    padding: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+}
+
+.form-container-textarea {
+    grid-column: 1 / 3;
+}
+
+.form-container-textarea input {
+    font-family: "poppins";
+    background: none;
+    margin: 40px 0px;
+    border: none;
+    padding: 15px 0px;
+    color: #fff;
+    font-size: 18px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+.form-container-textarea button {
+    padding: 10px 0px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+    margin: 20px 0px;
+}
+
+.career-details-container {
+    margin: 50px 20px;
+}
+
+.career-details-container div {
+    margin: 40px 0px;
+}
+
+.career-details-container div h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 0px;
+    color: rgba(173, 120, 86, 1);
+}
+
+.career-details-container div p {
+    color: #ccc;
+    padding: 3px 0px;
+    width: 40%;
+}
+
+
+.career-copyright-container {
+    margin: 80px 20px 80px 20px;
+    color: #ccc;
+    text-transform: capitalize;
+}
+
+/* .input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    color: #555;
+    box-sizing: border-box;
+    font-family: 'Arvo';
+    font-size: 18px;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -100px;
+    padding: 10px 0px;
+    position: relative;
+    top: 50%;
+    width: 200px;
+    margin-bottom: 200px;
+  }
+
+  .input:focus {
+    outline: none;    
+  }
+  
+  input::-webkit-input-placeholder {
+    color: #AAA;
+  }
+  
+  input:focus::-webkit-input-placeholder {
+    color: dodgerblue;
+  }
+  
+  .input:focus + .underline {
+    transform: scale(1);
+  }
+  
+  .underline {
+    background-color: dodgerblue;
+    display: inline-block;
+    height: 2px;
+    left: 50px;
+    margin-top: -4px;
+    position: absolute;
+    top: 185px;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    width: 202px;
+  } */
+
+
+
+  select {
+    /* Styles for the drop-down button */
+    appearance: none;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #ccc;
+    width: 300px;
+    background: transparent;
+
+  }
+
+
+.career-position {
+    margin: 100px 0px;
+}
+
+.career-position span {
+    color: #ccc;
+    font-size: 1vw;
+    text-transform: uppercase;
+    margin-right: 50px;
+}
+
+/* Styling for the options */
+.selected option {
+    color: #ccc;
+    font-size: 16px;
+    padding: 20px;
+    background: #110A06;
+  }
+  
+  /* Styling for the selected option */
+  .selected option:checked {
+    background-color: #110A06;
+    color: #fff;
+  }
+
+  .selected option:hover {
+    background-color: #eee;
+    color: #000;
+  }
+
+  .option::selection {
+    background-color: #eee;
+    color: #000;
+  }
+  
+
+  .career-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .career-available-positions {
+    margin: 100px 100px 0px 0px;
+  }
+
+  .career-available-positions h4 {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 2vw;
+    font-weight: 400;
+    margin: 30px 0px;
+  }
+
+  .career-available-positions h3 {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    font-weight: 400;
+    margin: 10px 0px;
+  }
+
+  .career-available-positions h5 {
+    color: #ccc;
+    font-size: 20px;
+    padding: 0px 0px;
+    margin: 0px;
+  }
+
+  .career-available-positions p {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0px;
+    padding: 10px 0px;
+  }
+
+
+  /* Responsive */
+
+  @media (max-width: 768px) {
+    .career-container {
+      margin: 20px;
+    }
+    .career-title-container {
+      margin: 100px 0px;
+      width: 90vw;
+    }
+    .career-title-container p {
+      margin: 0px 0px;
+    }
+    .career-title-container h2 {
+      font-size: 12vw;
+    }
+
+    .career-bg-img {
+      /* width: 100%; */
+      display: none;
+
+  }
+  .career-position {
+    margin: 50px 0px 0px 0px;
+  }
+  .career-position span {
+    font-size: 16px;
+    margin-bottom: 20px;
+   }
+   select {
+    
+    margin-top: 10px;
+
+   }
+   .career-available-positions {
+    margin: 70px 0px 0px 0px;
+}
+    .career-form-container {
+      margin: 40% 0px 0px 0px;
+    }
+    .career-available-positions {
+      font-size: 16px;
+    }
+    .career-available-positions h4 {
+      font-size: 18px;
+    }
+    .career-available-positions h3 {
+      font-size: 20px;
+    }
+  }
