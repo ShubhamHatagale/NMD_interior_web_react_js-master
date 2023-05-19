@@ -466,6 +466,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
+  padding: 10%;
 }
 
 .the_way_we_work-designation {
@@ -856,6 +857,7 @@
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
 }
 
 .leader-image img {
@@ -863,6 +865,7 @@
   height: 200px;
   border-radius: 50%;
   margin-bottom: 20px;
+  margin-left: 36%;
   object-fit: cover;
   object-position: center;
 }
@@ -871,7 +874,7 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #b6a56f;
-  text-align: center;
+  text-align: end;
   background: linear-gradient(271deg, rgba(230, 182, 151, 1) 0%, rgba(173, 120, 86, 1) 5%, rgba(122, 74, 46, 1) 10%, rgba(181, 127, 92, 1) 50%, rgba(230, 182, 151, 1) 100%);
   background-size: 200% auto;
   background-clip: text;
@@ -884,7 +887,7 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #333;
-  text-align: center;
+  text-align: end;
 }
 
 .leader-description {
