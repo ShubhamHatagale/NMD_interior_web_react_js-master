@@ -5,7 +5,7 @@ import TalkUs from '../components/talkus';
 import Footer from '../components/footer';
 import SmoothScroll from '../components/smoothScroll';
 import nmdteam from '../assets/img/nmdteam (1).jpg';
-import { BsArrowRightCircle, BsFillLightbulbFill, BsGift, BsHandIndex, BsHandbag, BsLightbulb, BsLightbulbOff, BsSearch } from 'react-icons/bs';
+import { BsArrowRightCircle, BsFacebook, BsFillLightbulbFill, BsGift, BsHandIndex, BsHandbag, BsInstagram, BsLightbulb, BsLightbulbOff, BsSearch, BsTwitter } from 'react-icons/bs';
 
 function About() {
 
@@ -133,10 +133,9 @@ function About() {
             <section className='the_way_we_work'>
               <div className="responsive-div">
                 <h2><span >The Way We Work</span></h2>
-                {/* <h2><span className='about-know-title'>The Way We Work</span></h2> */}
 
               </div>
-              <div className="containers" >
+              {/* <div className="containers" >
                 <div className="responsive-div">
                   <div > <BsSearch color='#fff' size={50} /></div>
                   <h3>Analysis</h3>
@@ -166,56 +165,110 @@ function About() {
                     The pre- production phase of the project calls for great attention to details. This implies the production of technical detailing, cost – and manufacturing analysis as well as packaging and life cycle analysis.
                   </p>
                 </div>
-              </div>
+              </div> */}
 
             </section>
 
+            <div class="leaders-grid">
+              <div class="leader-card">
+                <div class="leader-image">
+                  {/* <img src={Image.image7} alt="Leader 1" /> */}
+                </div>
+                <h1 className='leader-name'><BsSearch color='#fff' size={50} /></h1>
+                <h1 className='the_way_we_work-designation'>Analysis</h1>
 
-            <section className='the_way_we_work'>
-              <div className="responsive-div">
-                <h2><span >Our Leaders</span></h2>
-                {/* <h2><span className='about-know-title'>The Way We Work</span></h2> */}
+                <p className='leader-description'>
+                  The aim is always to acquire a deep understanding of each project and each product. The identification of the exact needs and desires of all parties involved is key in order to define the essence of the project. In addition to this we also tries to lever our influence on clients to make decisions believed to be better for them, the product, the end user or the production process
+                </p>
 
               </div>
-              <div className="containers" >
-                <div className="responsive-div">
-                  {/* <div > <BsSearch color='#fff' size={50} /></div> */}
-                  {/* <h3>Analysis</h3> */}
-                  <img src={Image.image7} alt="" />
-                  <h1 >Mr. Niraj Mehta</h1>
-                  <h1 >Founder & Principal Designer</h1>
-                  <p >Niraj Mehta, did his Masters in Interior Design with distinction in 2011 from prestigious department of Sir John Cass Faculty of Art, Architecture and Design in London Metropolitan University, located in the heart of London, U.K. He is a Professional Member of Society of British and International Interior design (SBID). Niraj also won International City and art Competition in London, which gave him boost to the career. His art was placed in national museum of arts in Turkey in year 2009. </p>
-                  <p >After taking healthy on field experience for two years in Bangalore and London he established NMD Interiors., a design firm, in 2013. While working in Bangalore Niraj Designed Facebook Asia Pacific Headquarter in Hyderabad as a main design head for the competition. Niraj has travelled extensively to the Europe, Dubai & East Asia to explore the world of Interior Design. Niraj loves wildlife photography which he pursue the most for flowing his creative instinct. </p>
+
+              <div class="leader-card">
+                <div class="leader-image">
+                  {/* <img src={Image.image7} alt="Leader 1" /> */}
+                </div>
+                <h1 className='leader-name'><BsLightbulb color='#fff' size={50} /></h1>
+                <h1 className='the_way_we_work-designation'>Idea Generation</h1>
+
+                <p className='leader-description'>
+                  For us communication is the most important tool in our studio and in our projects. Whether it is with producer, manufacturer, each other or anyone else with a relevant input, it provides inspiration and insight. Dialogues within us are, we would like to believe, of positive nature: nothing is labeled as wrong or right, in the end the goal is to always get closer to the essence. An inquisitive and open- minded process is of great value to us
+                </p>
+                {/* <p className='leader-description'>After taking healthy on field experience for two years in Bangalore and London he established NMD Interiors., a design firm, in 2013. While working in Bangalore Niraj Designed Facebook Asia Pacific Headquarter in Hyderabad as a main design head for the competition. Niraj has travelled extensively to the Europe, Dubai & East Asia to explore the world of Interior Design. Niraj loves wildlife photography which he pursue the most for flowing his creative instinct. </p> */}
+
+              </div>
+
+
+              <div class="leader-card">
+                <div class="leader-image">
+                  {/* <img src={Image.image7} alt="Leader 1" /> */}
+                </div>
+                <h1 className='leader-name'><BsHandbag color='#fff' size={50} /></h1>
+                <h1 className='the_way_we_work-designation'>Materialization</h1>
+
+                <p className='leader-description'>
+                  Visualizing the ideas, by giving them a material form, is an important communicative tool. Visualization will often involve hand- drawn and digital sketches, model- making and mock- ups as well as 3D visualization and detailed technical plans.                  </p>
+
+              </div>
+
+
+              <div class="leader-card">
+                <div class="leader-image">
+                  {/* <img src={Image.image7} alt="Leader 1" /> */}
+                </div>
+                <h1 className='leader-name'><BsGift color='#fff' size={50} /></h1>
+                <h1 className='the_way_we_work-designation'>Products</h1>
+
+                <p className='leader-description'>
+                  The pre- production phase of the project calls for great attention to details. This implies the production of technical detailing, cost – and manufacturing analysis as well as packaging and life cycle analysis.                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <section class="the_way_we_work">
+              <div class="responsive-div">
+                <h2><span>Our Leaders</span></h2>
+              </div>
+            </section>
+
+            <div class="leaders-grid">
+              <div class="leader-card">
+                <div class="leader-image">
+                  <img src={Image.image7} alt="Leader 1" />
+                </div>
+                <h1 class="leader-designation">Founder & Principal Designer</h1>
+                <h1 class="leader-name">Mr. Niraj Mehta</h1>
+                <p class="leader-description">Niraj Mehta, did his Masters in Interior Design with distinction in 2011 from prestigious department of Sir John Cass Faculty of Art, Architecture and Design in London Metropolitan University, located in the heart of London, U.K. He is a Professional Member of Society of British and International Interior design (SBID). Niraj also won International City and art Competition in London, which gave him boost to the career. His art was placed in national museum of arts in Turkey in year 2009. </p>
+                <div class="leader-social-icons">
+                  <a href="https://www.facebook.com/NMDInteriors" target="_blank"><BsFacebook className='responsive-ico' color='#808080' size={30} /></a>
+                  <a href="https://twitter.com/NMDInteriors" target="_blank"><BsTwitter className='responsive-ico' color='#808080' size={30} /></a>
+                  <a href="https://www.instagram.com/NMDInteriors" target="_blank"><BsInstagram className='responsive-ico' color='#808080' size={30} /></a>
                 </div>
               </div>
 
-            </section>
-
-            <section className='the_way_we_work'>
-              <div className="responsive-div">
-                {/* <h2><span >Our Leaders</span></h2> */}
-                {/* <h2><span className='about-know-title'>The Way We Work</span></h2> */}
-
-              </div>
-              <div className="containers" >
-                <div className="responsive-div">
-                  {/* <div > <BsSearch color='#fff' size={50} /></div> */}
-                  {/* <h3>Analysis</h3> */}
-                  <img src={Image.image8} alt="" />
-                  <h1 >Mrs. Manasi Mehta</h1>
-                  <h1 >Co-Founder & Admin Head</h1>
-                  <p >Manasi Mehta, did her MSc Mathematics and looks after the design back office and manages the team extensively. In 2012, Manasi Marries Niraj and helping him to grow the business. She looks after all new materials and vendors to keep team updated.</p>
+              <div class="leader-card">
+                <div class="leader-image">
+                  <img src={Image.image8} alt="Leader 1" />
+                </div>
+                <h1 class="leader-designation">Co-Founder & Admin Head</h1>
+                <h1 class="leader-name">Mrs. Manasi Mehta</h1>
+                <p class="leader-description">Manasi Mehta, did her MSc Mathematics and looks after the design back office and manages the team extensively. In 2012, Manasi Marries Niraj and helping him to grow the business. She looks after all new materials and vendors to keep the team updated.</p>
+                <div class="leader-social-icons">
+                  <a href="https://www.facebook.com/NMDInteriors" target="_blank"><BsFacebook className='responsive-ico' color='#808080' size={30} /></a>
+                  <a href="https://twitter.com/NMDInteriors" target="_blank"><BsTwitter className='responsive-ico' color='#808080' size={30} /></a>
+                  <a href="https://www.instagram.com/NMDInteriors" target="_blank"><BsInstagram className='responsive-ico' color='#808080' size={30} /></a>
                 </div>
               </div>
-
-            </section>
+            </div>
 
             <TalkUs txtcolor="#fff" />
             <Footer txtcolor="#fff" />
           </div>
         </section>
       </SmoothScroll>
-    </div>
+    </div >
   )
 }
 
