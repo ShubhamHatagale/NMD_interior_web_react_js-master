@@ -373,50 +373,71 @@
   }
 }
 
-
-
-
 .the_way_we_work .containers {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.the_way_we_work{
+  margin-top: 10%;
+}
+
 .the_way_we_work .responsive-div {
-    flex: 1 1 14%;
-    margin: 10px;
-    padding: 20px;
-    /* background-color: #f0f0f0; */
-    text-align: center;
-    font-size: 12px;
-    color: white;
-  }
+  flex: 1 1 14%;
+  margin: 10px;
+  padding: 20px;
+  /* background-color: #f0f0f0; */
+  text-align: center;
+  font-size: 12px;
+  color: white;
+}
 
-  .the_way_we_work div h2 {
-    text-transform: uppercase;
-    font-weight: 450;
-    font-size: 3rem;
-    font-family: var(--neue) !important;
-    background: linear-gradient(
-      271deg,
-      rgba(230, 182, 151, 1) 0%,
-      rgba(173, 120, 86, 1) 5%,
-      rgba(122, 74, 46, 1) 10%,
-      rgba(181, 127, 92, 1) 50%,
-      rgba(230, 182, 151, 1) 100%
-    );
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 2s linear infinite;
-    text-transform: uppercase;
-  }
-  
-  /* Media query for responsiveness */
-  @media (max-width: 768px) {
-    .the_way_we_work .responsive-div {
-        flex-basis: 100%;
-    }
-  }
+.the_way_we_work div h2 {
+  text-transform: uppercase;
+  font-weight: 450;
+  font-size: 6rem;
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+  text-transform: uppercase;
+}
 
-  
+
+.the_way_we_work div h3 {
+  text-transform: uppercase;
+  font-weight: 450;
+  font-size: 3rem;
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+  text-transform: uppercase;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .the_way_we_work .responsive-div {
+    flex-basis: 100%;
+  }
+}
