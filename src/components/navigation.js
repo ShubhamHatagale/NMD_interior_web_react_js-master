@@ -16,6 +16,7 @@ function Navigation() {
         <div className='main-nav-section'>
             <div className='navigation-section'>
                 <div className='navigation-details'>
+                    
                     <div>
                         <h2>Contact</h2>
                         <p>+911234567890</p>

@@ -56,13 +56,13 @@ function Contact() {
           <div className='contact-details-container'>
             <div>
               <h2>Contact</h2>
-              <p>+911234567890</p>
-              <p>contact@nmd.com</p>
+              <p>0217-2312443</p>
+              <p>NIRAJ@NMDINTERIORS.COM</p>
             </div>
 
             <div>
               <h2>Address</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium</p>
+              <p>SANJEEVANI, 560/27, S. S BAZAR, VINAYAK NAGAR, SOLAPUR - 413003.MAHARASHTRA, INDIA.</p>
             </div>
           </div>
 
