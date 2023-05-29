@@ -183,6 +183,7 @@ function About() {
                 </div>
                 <div className='about-know-text-flex'>
                   <div>
+                    {/* test */}
                     <p>Mr. Niraj Mehta, the visionary Founder of our prestigious company, completed his bachelors and master’s in interior design and Technology from the globally reputed London Metropolitan University, England. He emerged victorious in a notable city and art competition in 2009.</p>
                     <p>With his academic background of extensive design process studied during his Masters gave Mr. Niraj an edge over his fellow competitors as he was able to hone his creative skills as well as testing digital technology so as to encounter several creative challenges, consequently channelizing his interests and skills to combine digital technology with designing craftsmanship through various processes such as 3 D printing, laser cutting.</p>
                     <p>Our family of extremely dedicated employees tries to celebrate the exquisite Nature in every subtlety, exhibiting respect and gratitude towards people, practices, science, services, and above all, the cradle called environment nourishes and flourishes us.</p>
