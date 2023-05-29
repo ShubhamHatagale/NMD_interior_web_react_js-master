@@ -3,6 +3,7 @@ import ContentImg2 from '../assets/img/img2.jpg'
 
 
 function Contact() {
+  const currentYear = new Date().getFullYear();
 
   return (
     <>
@@ -78,7 +79,7 @@ function Contact() {
           </div>
 
           <div className='contact-copyright-container'>
-            <span>Copyright ©2023 all rights reserved to NMD  </span> | <span>  Designed and Developed by Conversant</span>
+            <span>Copyright ©{currentYear} all rights reserved to NMD  </span> | <span>  Designed and Developed by Conversant</span>
           </div>
         </div>
 

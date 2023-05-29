@@ -7,9 +7,9 @@ function Navigation() {
     const { reveal } = useMultiLayerPageReveal();
 
     function handleReveal() {
-        reveal(() => {
-            console.log('hello')
-        }, 750);
+        // reveal(() => {
+        //     console.log('hello')
+        // }, 750);
     }
 
     return (

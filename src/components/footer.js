@@ -3,10 +3,12 @@ import { FaInstagram } from 'react-icons/fa';
 import { ImFacebook, ImPinterest2} from 'react-icons/im';
 
 function Footer(props) {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer style={{background: props.bgcolor}}>
         <div className="footer-conatiner">
-          <div className='footer-copyright' style={{color: props.txtcolor}}>Copyright ©2023 all rights reserved to NMD </div>
+          <div className='footer-copyright' style={{color: props.txtcolor}}>Copyright ©{currentYear} all rights reserved to NMD </div>
           <div className='footer-credit'><p style={{color: props.txtcolor}}>Designed and Developed by Conversant</p></div>
           <div className='footer-social'>
             <ul>

@@ -320,9 +320,10 @@
 
   .about-content-text-wrapper p {
     width: 70%;
-    top: 60vh;
+    top: 106vh;
     text-align: justify;
   }
+
   .about-title-wrapper {
     width: 90%;
   }
@@ -460,6 +461,10 @@
   .the_way_we_work .responsive-div {
     flex-basis: 100%;
   }
+
+  .the_way_we_work div h2 {
+    font-size: 4rem;
+  }
 }
 
 
@@ -489,6 +494,7 @@
   font-size: 2rem;
   color: #333;
   margin-bottom: 20px;
+  
 }
 
 .leader-card {
@@ -583,6 +589,19 @@
   transform: translateY(-15px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 } */
+
+@media (max-width: 480px) {
+  .the_way_we_work div h2 {
+    font-size: 3rem;
+  }
+
+  .about-content-text-wrapper p {
+    width: 70%;
+    top: 90vh;
+    text-align: justify;
+  }
+
+}
 
 @keyframes shine {
   0% {
