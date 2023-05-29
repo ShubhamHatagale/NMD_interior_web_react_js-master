@@ -8,6 +8,64 @@ import nmdteam from '../assets/img/nmdteam (1).jpg';
 import { BsArrowRightCircle, BsFacebook, BsFillLightbulbFill, BsGift, BsHandIndex, BsHandbag, BsInstagram, BsLightbulb, BsLightbulbOff, BsSearch, BsTwitter } from 'react-icons/bs';
 
 function About() {
+  const data = [
+    {
+      leaderImage: 'Image.image7',
+      leaderName: <BsSearch color='#2c2828' size={50} />,
+      designation: 'Analysis',
+      description:
+        'The aim is always to acquire a deep understanding of each project and each product. The identification of the exact needs and desires of all parties involved is key in order to define the essence of the project. In addition to this we also tries to lever our influence on clients to make decisions believed to be better for them, the product, the end user or the production process',
+    },
+    {
+      leaderImage: 'Image.image7',
+      leaderName: <BsLightbulb color='#2c2828' size={50} />,
+      designation: 'Idea Generation',
+      description:
+        'For us communication is the most important tool in our studio and in our projects. Whether it is with producer, manufacturer, each other or anyone else with a relevant input, it provides inspiration and insight. Dialogues within us are, we would like to believe, of positive nature: nothing is labeled as wrong or right, in the end the goal is to always get closer to the essence. An inquisitive and open- minded process is of great value to us',
+    },
+    {
+      leaderImage: 'Image.image7',
+      leaderName: <BsHandbag color='#2c2828' size={50} />,
+      designation: 'Materialization',
+      description:
+        'Visualizing the ideas, by giving them a material form, is an important communicative tool. Visualization will often involve hand- drawn and digital sketches, model- making and mock- ups as well as 3D visualization and detailed technical plans.',
+    },
+    {
+      leaderImage: 'Image.image7',
+      leaderName: <BsGift color='#2c2828' size={50} />,
+      designation: 'Products',
+      description:
+        'The pre- production phase of the project calls for great attention to details. This implies the production of technical detailing, cost – and manufacturing analysis as well as packaging and life cycle analysis.',
+    },
+  ];
+
+
+  const LeadesData = [
+    {
+      leaderImage: Image.image7,
+      designation: 'Founder & Principal Designer',
+      name: 'Mr. Niraj Mehta',
+      description:
+        'Niraj Mehta, did his Masters in Interior Design with distinction in 2011 from prestigious department of Sir John Cass Faculty of Art, Architecture and Design in London Metropolitan University, located in the heart of London, U.K. He is a Professional Member of Society of British and International Interior design (SBID). Niraj also won International City and art Competition in London, which gave him boost to the career. His art was placed in national museum of arts in Turkey in year 2009.',
+      socialLinks: {
+        facebook: 'https://www.facebook.com/NMDInteriors',
+        twitter: 'https://twitter.com/NMDInteriors',
+        instagram: 'https://www.instagram.com/NMDInteriors',
+      },
+    },
+    {
+      leaderImage: Image.image8,
+      designation: 'Co-Founder & Admin Head',
+      name: 'Mrs. Manasi Mehta',
+      description:
+        'Manasi Mehta, did her MSc Mathematics and looks after the design back office and manages the team extensively. In 2012, Manasi Marries Niraj and helping him to grow the business. She looks after all new materials and vendors to keep the team updated.',
+      socialLinks: {
+        facebook: 'https://www.facebook.com/NMDInteriors',
+        twitter: 'https://twitter.com/NMDInteriors',
+        instagram: 'https://www.instagram.com/NMDInteriors',
+      },
+    },
+  ];
 
   const [bgcolor, setBgColor] = useState("white")
 
@@ -17,8 +75,44 @@ function About() {
       : setBgColor("#110A06")
   }
 
+  const the_way_we_work = data.map((item, index) => (
+    <div key={index} className="leader-card">
+      <div className="leader-image">
+        {/* <img src={item.leaderImage} alt={`Leader ${index + 1}`} /> */}
+      </div>
+      <h1 className="the_way_we_work-leader-name">{item.leaderName}</h1>
+      <h1 className="the_way_we_work-designation">{item.designation}</h1>
+      <p className="leader-description">{item.description}</p>
+    </div>
+  ));
+
+  const leaderCards = LeadesData.map((item, index) => (
+    <div key={index} className="leader-card">
+      <div className="leader-image">
+        <img src={item.leaderImage} alt={`Leader ${index + 1}`} />
+      </div>
+      <h1 className="leader-designation">{item.designation}</h1>
+      <h1 className="leader-name">{item.name}</h1>
+      <p className="leader-description">{item.description}</p>
+      <div className="leader-social-icons">
+        <a href={item.socialLinks.facebook} target="_blank">
+          <BsFacebook className="responsive-ico" color="#808080" size={30} />
+        </a>
+        <a href={item.socialLinks.twitter} target="_blank">
+          <BsTwitter className="responsive-ico" color="#808080" size={30} />
+        </a>
+        <a href={item.socialLinks.instagram} target="_blank">
+          <BsInstagram className="responsive-ico" color="#808080" size={30} />
+        </a>
+      </div>
+    </div>
+  ));
+
+
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
+
+
   })
 
   return (
@@ -31,12 +125,11 @@ function About() {
 
               <div className='about-content-text-wrapper'>
                 <h4> <span className='about-content-title'>About Us</span> </h4>
-
                 <span className='about-content-title-cur'>Hello.</span>
                 <p>A stellar organization for interior designing, NMD Interiors boasts of its forte in Healthcare, residential and corporate interiors. We are a well-integrated and highly coordinated bunch of naturally gifted individuals specializing in a wide array of professional domains such as turnkey interior projects, 3D design modelling and site supervision.</p>
 
-
               </div>
+
               <div className='about-content-img-wrapper-right'>
 
                 <div className='about-right-image'>
@@ -53,18 +146,15 @@ function About() {
 
             <section className='about-title-section' style={{ background: bgcolor }}>
 
-
               <div className='about-title-wrapper'>
                 <h4> <span className='about-msg-title'>High-end exteriors & interiors</span> <span className='about-msg-title-cur'>Designs</span></h4>
                 <p>At its fundamental core, here at NMD Interiors, we dynamically portray the new-age vision in its implementation of crucial forms of knowledge, diving into the sheer depths of a subject matter, exploring and sharing its beauty. Unlike other players functioning currently in the interior designing industry, our work principles believe in finding inspiration in various forms, spaces, relations, tangibles, and intangibles, while we try to search hidden resources within and without.</p>
               </div>
 
-
             </section>
 
 
             <section>
-
 
               <div class="container">
                 <div class="text-wrapper">
@@ -74,7 +164,6 @@ function About() {
                   <div class="right-to-left"><h1>NMD Interior and exterior designers</h1></div>
                 </div>
               </div>
-
 
             </section>
 
@@ -87,7 +176,6 @@ function About() {
             <section className='about-know-how-section'>
 
               <div className='about-know-flex-container'>
-
                 <div className='about-know-title-flex'>
                   <div>
                     <img src={Image.image3} alt='' className='responsive-image' />
@@ -125,143 +213,26 @@ function About() {
                     <p>At NMD, we all sit together and think together. Our open office work culture has resulted in free interaction between employees and creating a strong team. Freedom to think and explore is evident in our work. We also invest a lot of time and energy in nurturing our talent. Management and technical training workshops are a part of the routine. Our colleagues come from diverse cultures and backgrounds, bringing in their wealth of knowledge to the organization.</p>
                     <p>NMD is a family of inspired individuals headed by young, passionate professional designers bringing in their expertise into different verticals.</p>
                   </div>
-
                 </div>
               </div>
             </section>
 
+            {/* Section For The Way We Work */}
             <section className='the_way_we_work'>
               <div className="responsive-div">
                 <h2><span >The Way We Work</span></h2>
-
               </div>
-              {/* <div className="containers" >
-                <div className="responsive-div">
-                  <div > <BsSearch color='#fff' size={50} /></div>
-                  <h3>Analysis</h3>
-                  <p>
-                    The aim is always to acquire a deep understanding of each project and each product. The identification of the exact needs and desires of all parties involved is key in order to define the essence of the project. In addition to this we also tries to lever our influence on clients to make decisions believed to be better for them, the product, the end user or the production process.
-                  </p>
-                </div>
-                <div className="responsive-div">
-                  <div > <BsLightbulb color='#fff' size={50} /></div>
-
-                  <h3>Idea Generation</h3>
-                  <p>For us communication is the most important tool in our studio and in our projects. Whether it is with producer, manufacturer, each other or anyone else with a relevant input, it provides inspiration and insight. Dialogues within us are, we would like to believe, of positive nature: nothing is labeled as wrong or right, in the end the goal is to always get closer to the essence. An inquisitive and open- minded process is of great value to us</p>
-
-                </div>
-                <div className="responsive-div">
-                  <div > <BsHandbag color='#fff' size={50} /></div>
-                  <h3>Materialization</h3>
-                  <p>
-                    Visualizing the ideas, by giving them a material form, is an important communicative tool. Visualization will often involve hand- drawn and digital sketches, model- making and mock- ups as well as 3D visualization and detailed technical plans.
-                  </p>
-                </div>
-                <div className="responsive-div">
-                  <div > <BsGift color='#fff' size={50} /></div>
-
-                  <h3>Products</h3>
-                  <p>
-                    The pre- production phase of the project calls for great attention to details. This implies the production of technical detailing, cost – and manufacturing analysis as well as packaging and life cycle analysis.
-                  </p>
-                </div>
-              </div> */}
-
+              <div className="leaders-grid">{the_way_we_work}</div>;
             </section>
 
-            <div class="leaders-grid">
-              <div class="leader-card">
-                <div class="leader-image">
-                  {/* <img src={Image.image7} alt="Leader 1" /> */}
-                </div>
-                <h1 className='leader-name'><BsSearch color='#fff' size={50} /></h1>
-                <h1 className='the_way_we_work-designation'>Analysis</h1>
-
-                <p className='leader-description'>
-                  The aim is always to acquire a deep understanding of each project and each product. The identification of the exact needs and desires of all parties involved is key in order to define the essence of the project. In addition to this we also tries to lever our influence on clients to make decisions believed to be better for them, the product, the end user or the production process
-                </p>
-
-              </div>
-
-              <div class="leader-card">
-                <div class="leader-image">
-                  {/* <img src={Image.image7} alt="Leader 1" /> */}
-                </div>
-                <h1 className='leader-name'><BsLightbulb color='#fff' size={50} /></h1>
-                <h1 className='the_way_we_work-designation'>Idea Generation</h1>
-
-                <p className='leader-description'>
-                  For us communication is the most important tool in our studio and in our projects. Whether it is with producer, manufacturer, each other or anyone else with a relevant input, it provides inspiration and insight. Dialogues within us are, we would like to believe, of positive nature: nothing is labeled as wrong or right, in the end the goal is to always get closer to the essence. An inquisitive and open- minded process is of great value to us
-                </p>
-                {/* <p className='leader-description'>After taking healthy on field experience for two years in Bangalore and London he established NMD Interiors., a design firm, in 2013. While working in Bangalore Niraj Designed Facebook Asia Pacific Headquarter in Hyderabad as a main design head for the competition. Niraj has travelled extensively to the Europe, Dubai & East Asia to explore the world of Interior Design. Niraj loves wildlife photography which he pursue the most for flowing his creative instinct. </p> */}
-
-              </div>
-
-
-              <div class="leader-card">
-                <div class="leader-image">
-                  {/* <img src={Image.image7} alt="Leader 1" /> */}
-                </div>
-                <h1 className='leader-name'><BsHandbag color='#fff' size={50} /></h1>
-                <h1 className='the_way_we_work-designation'>Materialization</h1>
-
-                <p className='leader-description'>
-                  Visualizing the ideas, by giving them a material form, is an important communicative tool. Visualization will often involve hand- drawn and digital sketches, model- making and mock- ups as well as 3D visualization and detailed technical plans.                  </p>
-
-              </div>
-
-
-              <div class="leader-card">
-                <div class="leader-image">
-                  {/* <img src={Image.image7} alt="Leader 1" /> */}
-                </div>
-                <h1 className='leader-name'><BsGift color='#fff' size={50} /></h1>
-                <h1 className='the_way_we_work-designation'>Products</h1>
-
-                <p className='leader-description'>
-                  The pre- production phase of the project calls for great attention to details. This implies the production of technical detailing, cost – and manufacturing analysis as well as packaging and life cycle analysis.                </p>
-
-              </div>
-
-            </div>
-
-
-
+            {/* Section For Our Leaders */}
             <section class="the_way_we_work">
               <div class="responsive-div">
                 <h2><span>Our Leaders</span></h2>
               </div>
+              <div className="leaders-grid">{leaderCards}</div>;
             </section>
 
-            <div class="leaders-grid">
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src={Image.image7} alt="Leader 1" />
-                </div>
-                <h1 class="leader-designation">Founder & Principal Designer</h1>
-                <h1 class="leader-name">Mr. Niraj Mehta</h1>
-                <p class="leader-description">Niraj Mehta, did his Masters in Interior Design with distinction in 2011 from prestigious department of Sir John Cass Faculty of Art, Architecture and Design in London Metropolitan University, located in the heart of London, U.K. He is a Professional Member of Society of British and International Interior design (SBID). Niraj also won International City and art Competition in London, which gave him boost to the career. His art was placed in national museum of arts in Turkey in year 2009. </p>
-                <div class="leader-social-icons">
-                  <a href="https://www.facebook.com/NMDInteriors" target="_blank"><BsFacebook className='responsive-ico' color='#808080' size={30} /></a>
-                  <a href="https://twitter.com/NMDInteriors" target="_blank"><BsTwitter className='responsive-ico' color='#808080' size={30} /></a>
-                  <a href="https://www.instagram.com/NMDInteriors" target="_blank"><BsInstagram className='responsive-ico' color='#808080' size={30} /></a>
-                </div>
-              </div>
-
-              <div class="leader-card">
-                <div class="leader-image">
-                  <img src={Image.image8} alt="Leader 1" />
-                </div>
-                <h1 class="leader-designation">Co-Founder & Admin Head</h1>
-                <h1 class="leader-name">Mrs. Manasi Mehta</h1>
-                <p class="leader-description">Manasi Mehta, did her MSc Mathematics and looks after the design back office and manages the team extensively. In 2012, Manasi Marries Niraj and helping him to grow the business. She looks after all new materials and vendors to keep the team updated.</p>
-                <div class="leader-social-icons">
-                  <a href="https://www.facebook.com/NMDInteriors" target="_blank"><BsFacebook className='responsive-ico' color='#808080' size={30} /></a>
-                  <a href="https://twitter.com/NMDInteriors" target="_blank"><BsTwitter className='responsive-ico' color='#808080' size={30} /></a>
-                  <a href="https://www.instagram.com/NMDInteriors" target="_blank"><BsInstagram className='responsive-ico' color='#808080' size={30} /></a>
-                </div>
-              </div>
-            </div>
 
             <TalkUs txtcolor="#fff" />
             <Footer txtcolor="#fff" />
