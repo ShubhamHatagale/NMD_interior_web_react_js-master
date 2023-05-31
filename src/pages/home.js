@@ -12,6 +12,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import SmoothScroll from '../components/smoothScroll';
 import TalkUs from '../components/talkus';
 import Footer from '../components/footer';
+import { FaAddressBook, FaFigma, FaFile, FaFileArchive, FaFileCode, FaFileContract, FaFileCsv, FaFilePowerpoint, FaHistory, FaMap, FaMapMarked, FaMapMarker, FaMapMarkerAlt, FaMapPin, FaPager, FaPersonBooth, FaProjectDiagram, FaRProject, FaRegMap, FaRegistered, FaTasks, FaUserCircle, FaUsers, FaUsersCog, FaWatchmanMonitoring } from 'react-icons/fa';
+import { BsCardList, BsFile, BsFiles, BsListCheck, BsListTask, BsMusicNote, BsNewspaper, BsPaperclip, BsPin, BsPinMap, BsPinMapFill, BsReceipt, BsRecord, BsStack, BsViewList } from 'react-icons/bs';
 // import { gsap } from "gsap-trial";
 // import ScrollTrigger from "gsap/ScrollTrigger";
 // import ScrollSmoother from "gsap/ScrollSmoother";
@@ -60,7 +62,7 @@ function Home() {
             <div className='main-home'>
               <section className='hero-section' style={{ background: bgcolor }}>
                 <div className='main_bg_img'>
-                  <img src={main_bg} alt=""/>
+                  <img src={main_bg} alt="" />
                 </div>
                 <div className='hero-img-position'>
                   <div className='hero-svg-wrapper'>
@@ -109,25 +111,7 @@ function Home() {
               </section>
 
 
-              <section className='hero-purpose-section'>
-                {/* <div className='purpose-svg-wrapper'>
-          <Parallax speed={70}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 964.249 733.637">
-              <defs>
-                <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
-                  <stop offset="0" stop-color="#d6a380" />
-                  <stop offset="1" stop-color="#d1793a" />
-                </linearGradient>
-              </defs>
-              <g id="Group_8" data-name="Group 8" transform="translate(1579.252 -3102.312)">
-                <path id="Path_2" data-name="Path 2" d="M470.341,664.88V314.931H594.014L708.548,481.614V314.931h7.825l-.356,349.949H640.61L478.768,430.393V664.88Z" transform="translate(-2049.593 2787.381)" fill="url(#linear-gradient)" />
-                <path id="Path_3" data-name="Path 3" d="M766.39,664.88l-.183-350.444H880.884l91.094,201.609,72.6-201.609h100.342V664.88h-126.7V413.853L927.124,664.88H861L774.068,460.094V664.88Z" transform="translate(-2084.967 2951.382)" fill="url(#linear-gradient)" />
-                <path id="Path_4" data-name="Path 4" d="M1156.941,664.88V314.436h106.816s99.01,1.294,132.513,20.845c54.087,31.564,73.258,107.024,73.258,161.343,0,38.374-18.382,109.171-62.886,138.769-56.8,37.776-142.885,29.487-142.885,29.487Z" transform="translate(-2084.531 3170.298)" fill="url(#linear-gradient)" />
-              </g>
-            </svg>
-          </Parallax>
-        </div> */}
-
+              <section className='hero-purpose-section'>          
                 <div className='purpose-flex-container'>
                   <div className='purpose-slider-container'>
                     <div>
@@ -156,11 +140,11 @@ function Home() {
                   <div className='purpose-text-container'>
                     <div className='purpose-text-wrapper'>
                       <div className='purpose-title-container'>
-                        <h2>Our purpose</h2>
-                        <h4>To remain friends with our clients</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
+                        <h2>WELCOME TO N M D INTERIORS</h2>
+                        {/* <h4>To remain friends with our clients</h4> */}
+                        <p>We are designers, artists, dreamers and above all storytellers. You may wonder how? Stories need not be told only in words. Every note in music spins a story and in the same way, every color, texture and finish narrates a story. We are here to express your story.Star</p>
                       </div>
-                      <div className='purpose-links-container'>
+                      {/* <div className='purpose-links-container'>
                         <div>
                           <hr />
                           <h4>Our Team</h4>
@@ -176,7 +160,7 @@ function Home() {
                           <h4>Our Culture</h4>
                           <hr />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -189,7 +173,7 @@ function Home() {
                       <h2><span className='project-title'> Devotion to Quality </span><span className='project-title-cur'>Projects</span></h2>
                     </div>
                     <div>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
+                      <p>In the realm of interior design, quality reigns supreme. It is the cornerstone of creating exceptional spaces that exude style, functionality, and durability. From handpicking superior materials to ensuring impeccable craftsmanship, every detail matters. Attention to detail, meticulous planning, and an eye for perfection are all part of the equation. Quality design goes beyond aesthetics, prioritizing the seamless integration of form and function. By emphasizing longevity and sustainability, designers deliver timeless creations that withstand the test of time. Collaborating with skilled professionals and maintaining professionalism throughout the process further elevates the quality of the end result. In interior design, quality is the key to unlocking spaces that inspire and endure.</p>
                     </div>
                   </div>
                 </div>
@@ -210,21 +194,21 @@ function Home() {
                     </div>
                     <div className='project-image3'>
                       <Parallax speed={-10}>
-                      <h1>Project Name</h1>
+                        <h1>Project Name</h1>
                         <img src={ContentImg3} alt="" />
                         <div class="overlay"></div>
                       </Parallax>
                       <div className='project-image2'>
                         <Parallax speed={20}>
-                        <h1>Project Name</h1>
-                        <img src={ContentImg3} alt="" />
-                        <div class="overlay"></div>
+                          <h1>Project Name</h1>
+                          <img src={ContentImg3} alt="" />
+                          <div class="overlay"></div>
                         </Parallax>
                       </div>
                     </div>
                     <div className='project-image4'>
                       <Parallax speed={20}>
-                      <h1>Project Name</h1>
+                        <h1>Project Name</h1>
                         <img src={ContentImg3} alt="" />
                         <div class="overlay"></div>
                       </Parallax>
@@ -241,7 +225,122 @@ function Home() {
                 </div>
               </section>
 
-              <section className='know-how-section'>
+
+              <section className='hero-purpose-section'>          
+                <div className='purpose-flex-container'>
+                  <div className='purpose-slider-container'>
+                    <div>
+                      <Carousel
+                        showArrows={false}
+                        showStatus={false}
+                        showIndicators={false}
+                        showThumbs={false}
+                        infiniteLoop={true}
+                        autoPlay={true}
+                        interval={4000}
+                        stopOnHover={false}>
+                        <div>
+                          <img src={ContentImg1} ref={parallax.ref} alt="" />
+                        </div>
+                        <div>
+                          <img src={ContentImg2} ref={parallax.ref} alt="" />
+                        </div>
+                        <div>
+                          <img src={ContentImg1} ref={parallax.ref} alt="" />
+                        </div>
+                      </Carousel>
+                    </div>
+                  </div>
+
+                  <div className='purpose-text-container'>
+                    <div className='purpose-text-wrapper'>
+                      <div className='purpose-title-container'>
+                        <h2>Know-how</h2>
+                        {/* <h4>To remain friends with our clients</h4> */}
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
+                      </div>
+                      <div className='know-links-container'>
+                      <div className="card-block">
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <FaUsers
+                              className="card-image"
+                              color='black'
+                            />
+                            <span className="card-name">1200</span>
+                            <span className="card-name">HAPPY CUSTOMER</span>
+
+                          </div>
+                        </div>
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <FaFilePowerpoint
+                              className="card-image"
+                              color='black'
+                            />
+                            <span className="card-name">1200</span>
+                            <span className="card-name">COMPLETED PROJECTS</span>
+                          </div>
+                        </div>
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <BsCardList
+                              className="card-image"
+                              color='black'
+                            />
+                            <span className="card-name">1500</span>
+                            <span className="card-name">REGISTERED DESIGN</span>
+                          </div>
+                        </div>
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <FaMapMarkerAlt
+                              className="card-image"
+                              color='black'
+                            />
+                            <span className="card-name">2</span>
+                            <span className="card-name">CITIES IN INDIA</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* <div className="card">
+                        <div className="card-content">
+                          <div className="shine-animation">
+                            <FaAddressBook
+                              className="card-image"
+                            />
+                          </div>
+                          <span className="card-name">2</span>
+                          <span className="card-name">CITIES IN INDIA</span>
+                        </div>
+                      </div> */}
+
+                    </div>
+                      {/* <div className='purpose-links-container'>
+                        <div>
+                          <hr />
+                          <h4>Our Team</h4>
+                          <hr />
+                        </div>
+                        <div>
+                          <hr />
+                          <h4>Our Awards</h4>
+                          <hr />
+                        </div>
+                        <div>
+                          <hr />
+                          <h4>Our Culture</h4>
+                          <hr />
+                        </div>
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+
+              {/* <section className='know-how-section'>
                 <div className='know-flex-container'>
                   <div className='know-title-flex'>
                     <h2><span className='know-title'>Know-how</span></h2>
@@ -251,25 +350,55 @@ function Home() {
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
                     </div>
                     <div className='know-links-container'>
-                      <div>
-                        <hr />
-                        <h4>Our Team</h4>
-                        <hr />
+                      <div className="card-block">
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <FaUsers
+                              className="card-image"
+                              color='#966344'
+                            />
+                            <span className="card-name">1200</span>
+                            <span className="card-name">HAPPY CUSTOMER</span>
+
+                          </div>
+                        </div>
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <FaFilePowerpoint
+                              className="card-image"
+                              color='#966344'
+                            />
+                            <span className="card-name">1200</span>
+                            <span className="card-name">COMPLETED PROJECTS</span>
+                          </div>
+                        </div>
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <BsCardList
+                              className="card-image"
+                              color='#966344'
+                            />
+                            <span className="card-name">1500</span>
+                            <span className="card-name">REGISTERED DESIGN</span>
+                          </div>
+                        </div>
+                        <div className="card">
+                          <div className="card-content shine-animation">
+                            <FaMapMarkerAlt
+                              className="card-image"
+                              color='#966344'
+                            />
+                            <span className="card-name">2</span>
+                            <span className="card-name">CITIES IN INDIA</span>
+                          </div>
+                        </div>
                       </div>
-                      <div>
-                        <hr />
-                        <h4>Our Awards</h4>
-                        <hr />
-                      </div>
-                      <div>
-                        <hr />
-                        <h4>Our Culture</h4>
-                        <hr />
-                      </div>
+
+
                     </div>
                   </div>
                 </div>
-              </section>
+              </section> */}
 
 
               <TalkUs bgcolor="#fff" />

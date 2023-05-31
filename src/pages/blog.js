@@ -145,7 +145,9 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
                     {/* <div className='blogs-content-box' key={index}>
 
                     </div> */}
+                                        {/* <div className='blogs-content-box' key={index}></div> */}
                   </>
+
                 ))}
               </div>
             </section>

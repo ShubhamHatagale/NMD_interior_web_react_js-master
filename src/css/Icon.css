@@ -1,0 +1,32 @@
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.fa-spin {
+  text-transform: uppercase;
+  font-weight: 450;
+  font-size: 6rem;
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+  text-transform: uppercase;
+  /* margin-left: 30%; */
+  position: relative;
+  left: 32%;
+}

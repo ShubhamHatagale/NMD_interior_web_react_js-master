@@ -321,7 +321,7 @@
     top: 25vh;
     left: 15vw;
     width: 50%;
-    text-align: justify;
+    text-align: left;
 }
 
 .project-flex-container div h2 {
@@ -690,3 +690,93 @@
         font-size: 6vw;
     }
  }
+
+
+ .card-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: 40px;
+  /* background-color: #f2f2f2; */
+  border-radius: 5px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-image {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  
+  
+}
+
+.card-name {
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* 
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-image {
+  animation: slideIn 1s forwards;
+  
+} */
+
+
+@keyframes shine {
+    0% {
+      background-position: -200% 0%;
+    }
+    100% {
+      background-position: 200% 0%;
+    }
+  }
+  
+  .shine-animation {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .shine-animation::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 258, 0.2),
+      transparent
+    );
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    animation: shine 0.8s infinite linear;
+  }
+  
