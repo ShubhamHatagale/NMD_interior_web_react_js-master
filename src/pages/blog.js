@@ -4,8 +4,14 @@ import Footer from '../components/footer';
 import SmoothScroll from '../components/smoothScroll';
 import Image from '../components/images';
 import { BsArrowUpRightCircle } from "react-icons/bs";
+import { useEffect, useState } from 'react';
 
 function Blog() {
+
+  const APIUrl = process.env.REACT_APP_Base_URL;
+
+  const [blogsData, setblogsData] = useState([])
+
 
   const blogData = [
     {
@@ -80,6 +86,37 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
 
   ];
 
+
+  useEffect(() => {
+    GetPackageData()
+  }, [])
+
+
+  const GetPackageData = () => {
+
+    console.log("yes")
+    var myHeaders = new Headers();
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    }
+    fetch("http://localhost/NMD_backend/api-blog.php", requestOptions)
+      .then(res => res.json())
+      .then(result => {
+        console.log(result)
+        setblogsData(result)
+      })
+
+  }
+
+  const extractPlainText = (html) => {
+    const tempElement = document.createElement('div');
+    tempElement.innerHTML = html;
+    return tempElement.textContent || tempElement.innerText || '';
+  };
+
+
   return (
     <>
 
@@ -96,48 +133,26 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
               </div>
             </section>
 
-            {/* <section className='blogs-box-wrapper'>
-            <div className='blogs-box-container'>
-              <div className='blogs-content-box'>
-                <div className='blogs-image-box'>
-                  <img src={Image.image1} alt=""/>
-                </div>
-                  <div className='blogs-desc-box'>
-                    <h3>Blog Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
-                    <button><BsArrowUpRightCircle color='#ccc' size={50}/></button>
-                  </div>
-               
-              </div>
-              <div className='blogs-content-box'>
-              <div className='blogs-desc-box'>
-                    <h3>Blog Title</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
-                    <button><BsArrowUpRightCircle color='#ccc' size={50}/></button>
-                  </div>
-                <div className='blogs-image-box'>
-                  <img src={Image.image2} alt=""/>
-                </div>
-               
-              </div>
-             
-            </div>
-          </section> */}
+
 
             <section className='blogs-box-wrapper'>
               <div className='blogs-box-container'>
-                {blogData.map((blog, index) => (
+                {blogsData.map((blog, index) => (
                   <>
                     <div className='blogs-content-box' key={index}>
-                      {/* <div className='blogs-image-box'>
-                      <img src={Image.image1} alt="" />
-                    </div> */}
+
+                      {/* <div className="blogs-image-box">
+                        <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="" />
+                      </div> */}
+
                       {/* <div className='blogs-image-box'>
                       <img src={Image[`image${index + 1}`]} alt="" />
                     </div> */}
                       <div className='blogs-desc-box'>
                         <h3>{blog.title}</h3>
-                        <p>{blog.description}</p>
+                        {blog.description}
+                        {/* {extractPlainText(blog.description)} */}
+                        {/* <div dangerouslySetInnerHTML={{ __html: blog.description }} /> */}
                         <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
                       </div>
 
@@ -145,12 +160,14 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
                     {/* <div className='blogs-content-box' key={index}>
 
                     </div> */}
-                                        {/* <div className='blogs-content-box' key={index}></div> */}
+                    {/* <div className='blogs-content-box' key={index}></div> */}
                   </>
 
                 ))}
               </div>
             </section>
+
+
 
             <TalkUs txtcolor="#fff" />
             <Footer txtcolor="#fff" />

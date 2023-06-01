@@ -4,11 +4,39 @@ import TalkUs from '../components/talkus';
 import Footer from '../components/footer';
 import SmoothScroll from '../components/smoothScroll';
 import Image from '../components/images';
+import { useEffect, useState } from 'react';
 
 
 function News() {
+  const APIUrl = process.env.REACT_APP_Base_URL;
 
-  const newsData = [
+  const [newsData, setnewsData] = useState([])
+
+
+  useEffect(() => {
+    GetPackageData()
+  }, [])
+
+
+  const GetPackageData = () => {
+
+    console.log("yes")
+    var myHeaders = new Headers();
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    }
+    fetch(APIUrl + '/news', requestOptions)
+      .then(res => res.json())
+      .then(result => {
+        console.log(result.data)
+        setnewsData(result.data)
+      })
+
+  }
+
+  const newsDatas = [
     {
       id: 0,
       img0: Image.image2,
@@ -89,12 +117,13 @@ function News() {
                         <p>{item.description}</p>
                       </div>
                     </div>
+
                   </div>
                 </div>
               ))}
-              
 
-              
+
+
             </section>
 
             <TalkUs txtcolor="#fff" />

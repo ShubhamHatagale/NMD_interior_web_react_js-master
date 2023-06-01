@@ -9,7 +9,7 @@ function Header() {
     const [show, setShow] = useState(true);
 
     function changeState() {
-        console.log('hello')
+        // console.log('hello')
         setShow(!show);
         
     }
