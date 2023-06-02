@@ -20,9 +20,10 @@ import { BsCardList, BsFile, BsFiles, BsListCheck, BsListTask, BsMusicNote, BsNe
 
 
 function Home() {
+  const APIUrl = process.env.REACT_APP_Base_URL;
 
   const [bgcolor, setBgColor] = useState("white")
-
+  const [pagesData, setpagesData]=useState([])
   const listenScrollEvent = e => {
     window.scrollY > 300
       ? setBgColor("#110A06")
@@ -32,7 +33,31 @@ function Home() {
 
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
-  })
+    GetPackageData()
+
+  },[])
+
+
+
+
+  const GetPackageData = () => {
+
+    console.log("yes")
+    var myHeaders = new Headers();
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    }
+    fetch(`${APIUrl}/api-pages.php`, requestOptions)
+      .then(res => res.json())
+      .then(result => {
+        console.log(result)
+        setpagesData(result)
+      })
+
+  }
+
 
   const parallax = useParallax({
     speed: -10,
@@ -111,7 +136,7 @@ function Home() {
               </section>
 
 
-              <section className='hero-purpose-section'>          
+              <section className='hero-purpose-section'>
                 <div className='purpose-flex-container'>
                   <div className='purpose-slider-container'>
                     <div>
@@ -143,6 +168,8 @@ function Home() {
                         <h2>WELCOME TO N M D INTERIORS</h2>
                         {/* <h4>To remain friends with our clients</h4> */}
                         <p>We are designers, artists, dreamers and above all storytellers. You may wonder how? Stories need not be told only in words. Every note in music spins a story and in the same way, every color, texture and finish narrates a story. We are here to express your story.Star</p>
+                        {/* <p>{pagesData[0].description}</p> */}
+
                       </div>
                       {/* <div className='purpose-links-container'>
                         <div>
@@ -226,7 +253,7 @@ function Home() {
               </section>
 
 
-              <section className='hero-purpose-section'>          
+              <section className='hero-purpose-section'>
                 <div className='purpose-flex-container'>
                   <div className='purpose-slider-container'>
                     <div>
@@ -260,51 +287,51 @@ function Home() {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
                       </div>
                       <div className='know-links-container'>
-                      <div className="card-block">
-                        <div className="card">
-                          <div className="card-content shine-animation">
-                            <FaUsers
-                              className="card-image"
-                              color='black'
-                            />
-                            <span className="card-name">1200</span>
-                            <span className="card-name">HAPPY CUSTOMER</span>
+                        <div className="card-block">
+                          <div className="card">
+                            <div className="card-content shine-animation">
+                              <FaUsers
+                                className="card-image"
+                                color='black'
+                              />
+                              <span className="card-name">1200</span>
+                              <span className="card-name">HAPPY CUSTOMER</span>
 
+                            </div>
+                          </div>
+                          <div className="card">
+                            <div className="card-content shine-animation">
+                              <FaFilePowerpoint
+                                className="card-image"
+                                color='black'
+                              />
+                              <span className="card-name">1200</span>
+                              <span className="card-name">COMPLETED PROJECTS</span>
+                            </div>
+                          </div>
+                          <div className="card">
+                            <div className="card-content shine-animation">
+                              <BsCardList
+                                className="card-image"
+                                color='black'
+                              />
+                              <span className="card-name">1500</span>
+                              <span className="card-name">REGISTERED DESIGN</span>
+                            </div>
+                          </div>
+                          <div className="card">
+                            <div className="card-content shine-animation">
+                              <FaMapMarkerAlt
+                                className="card-image"
+                                color='black'
+                              />
+                              <span className="card-name">2</span>
+                              <span className="card-name">CITIES IN INDIA</span>
+                            </div>
                           </div>
                         </div>
-                        <div className="card">
-                          <div className="card-content shine-animation">
-                            <FaFilePowerpoint
-                              className="card-image"
-                              color='black'
-                            />
-                            <span className="card-name">1200</span>
-                            <span className="card-name">COMPLETED PROJECTS</span>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div className="card-content shine-animation">
-                            <BsCardList
-                              className="card-image"
-                              color='black'
-                            />
-                            <span className="card-name">1500</span>
-                            <span className="card-name">REGISTERED DESIGN</span>
-                          </div>
-                        </div>
-                        <div className="card">
-                          <div className="card-content shine-animation">
-                            <FaMapMarkerAlt
-                              className="card-image"
-                              color='black'
-                            />
-                            <span className="card-name">2</span>
-                            <span className="card-name">CITIES IN INDIA</span>
-                          </div>
-                        </div>
-                      </div>
 
-                      {/* <div className="card">
+                        {/* <div className="card">
                         <div className="card-content">
                           <div className="shine-animation">
                             <FaAddressBook
@@ -316,7 +343,7 @@ function Home() {
                         </div>
                       </div> */}
 
-                    </div>
+                      </div>
                       {/* <div className='purpose-links-container'>
                         <div>
                           <hr />

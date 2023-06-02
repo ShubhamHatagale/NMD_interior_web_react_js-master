@@ -27,11 +27,11 @@ function News() {
       headers: myHeaders,
       redirect: 'follow'
     }
-    fetch(APIUrl + '/news', requestOptions)
+    fetch(APIUrl + '/api-news.php', requestOptions)
       .then(res => res.json())
       .then(result => {
-        console.log(result.data)
-        setnewsData(result.data)
+        console.log(result)
+        setnewsData(result)
       })
 
   }
