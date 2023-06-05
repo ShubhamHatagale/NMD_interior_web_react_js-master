@@ -24,6 +24,12 @@ const getItems = () =>
 
 function Work() {
 
+  const APIUrl = process.env.REACT_APP_Base_URL;
+
+  const [bgcolor, setBgColor] = useState("white")
+  const [projectsData, setprojectsData] = useState([])
+
+
   const products = [
     {
       id: 1,
@@ -153,12 +159,40 @@ function Work() {
   const imagesRef = useRef(null);
 
   const scrollLeft = () => {
-    imagesRef.current.scrollLeft -= 100;
+    containerRef.current.scrollLeft -= 100;
   };
 
   const scrollRight = () => {
-    imagesRef.current.scrollLeft += 100;
+    containerRef.current.scrollLeft += 100;
   };
+
+
+  useEffect(() => {
+    // window.addEventListener("scroll", listenScrollEvent)
+    GetPackageData()
+
+  }, [])
+
+
+
+
+  const GetPackageData = () => {
+
+    console.log("yes")
+    var myHeaders = new Headers();
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    }
+    fetch(`${APIUrl}/api-projects.php`, requestOptions)
+      .then(res => res.json())
+      .then(result => {
+        console.log(result)
+        setprojectsData(result)
+      })
+
+  }
 
   return (
     <>
@@ -174,16 +208,22 @@ function Work() {
             </div>
           </section>
 
-          {ourWorkData.map((item, key) => (
+          {projectsData.map((item, key) => (
             <section className='project-box-wrapper'>
-              <div className='project-box-container' ref={containerRef} onWheel={handleWheel}>
-                {item['products'].map((product) => (
-                  <div key={product.id} >
+              <div className='project-box-container'  onWheel={handleWheel}>
+                {products.map((product) => (
+                  <div key={product.id} ref={containerRef}>
                     <img src={product.image} alt={product.name} />
                     <h3>{product.name}</h3>
                     <p>{product.price}</p>
-                  </div> 
+                  </div>
                 ))}
+
+
+                {/* <img src={image1} alt={products.name} /> */}
+
+                {/* <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" /> */}
+
               </div>
 
               <div className='project-title-container'>

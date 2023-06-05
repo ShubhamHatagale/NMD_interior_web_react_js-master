@@ -174,7 +174,7 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
                         <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
 
                       </div>
-                      
+
                       <div className="blog-post-image">
                         <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
                       </div>
@@ -197,6 +197,49 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
 
               </div>
             </section>
+
+
+
+            {/* <section className='blogs-box-wrapper' style={{ color: "white" }}>
+              {blogsData.map((blog, index) => (
+                <>
+                  {index % 2 === 0 ? (
+                    <div className='blogs-box-container'>
+                      <div className='blogs-content-box'>
+                        <div className='blogs-image-box'>
+                          <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
+                        </div>
+                      </div>
+                      <div className='blogs-content-box'>
+                        <div className='blogs-desc-box'>
+                          <h3>{blog.title}</h3>
+                          <p>{blog.description}</p>
+                          <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
+                        </div>
+                      </div>
+
+                    </div>) : <div className='blogs-box-container'>
+
+                    <div className='blogs-content-box'>
+                      <div className='blogs-desc-box'>
+                        <h3>{blog.title}</h3>
+                        <p>{blog.description}</p>
+                        <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
+                      </div>
+                    </div>
+
+                    <div className='blogs-content-box'>
+                      <div className='blogs-image-box'>
+                        <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
+                      </div>
+                    </div>
+
+                  </div>}
+                </>
+
+              ))}
+
+            </section> */}
 
 
             {/* <section className='blogs-box-wrapper' style={{ color: "white" }}>
