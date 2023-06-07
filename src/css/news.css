@@ -1,188 +1,188 @@
 .news-title-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 100px 0px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 100px 0px;
 }
 
 .news-title-container div {
-   margin: 100px 150px;
-
+  margin: 100px 150px;
 }
 
 .news-title-container div h2 {
-    font-size: 10rem;
-    text-transform: uppercase;
-    line-height: 1;
-    font-weight: 450;
-    width: 70%;
+  font-size: 10rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 450;
+  width: 70%;
 }
 
 .news-title-container div h2 span {
-    font-family: var(--neue) !important;
-    background: linear-gradient(271deg, rgba(230, 182, 151, 1) 0%, rgba(173, 120, 86, 1) 5%, rgba(122, 74, 46, 1) 10%, rgba(181, 127, 92, 1) 50%, rgba(230, 182, 151, 1) 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s linear infinite;
-    text-transform: uppercase;
+  font-family: var(--neue) !important;
+  background: linear-gradient(
+    271deg,
+    rgba(230, 182, 151, 1) 0%,
+    rgba(173, 120, 86, 1) 5%,
+    rgba(122, 74, 46, 1) 10%,
+    rgba(181, 127, 92, 1) 50%,
+    rgba(230, 182, 151, 1) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  text-transform: uppercase;
 }
 
 .news-title-container div p {
-    color: #ccc;
-    position: relative;
-    top: 40vh;
-    width: 80%;
-    float: right;
+  color: #ccc;
+  position: relative;
+  top: 40vh;
+  width: 80%;
+  float: right;
 }
 
 .news-box-wrapper {
-    position: relative;
-    top: 15vh;
-    margin: 50px 40px 40px 40px;
-    height: 100%;
-    width: 95vw;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  position: relative;
+  top: 15vh;
+  margin: 50px 40px 40px 40px;
+  height: 100%;
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
- .news-box-container {
-    display: flex;
-    width: 60vw;
-    flex-direction: column;
-    margin: 100px 80px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+.news-box-container {
+  display: flex;
+  width: 40vw;
+  flex-direction: column;
+  margin: 100px 140px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .news-box-container p {
-
 }
 
-.news-box-container img{
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.5s ease;
+.news-box-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .news-box-container img:hover {
-    transform: scale(1.2) rotateY(10deg);
-  }
+  transform: scale(1.2) rotateY(10deg);
+}
 
 .image-container {
-    display: flex;
-    overflow-x: scroll;
-    width: 100%;
-  }
-  
-  .image-container div {
-    width: 100%;
-    height: 100vh;
-    background-color: #ccc;
-    margin-right: 10px;
-  }
-  
-  .imggg img {
-    height: 80vh;
-    width: 100vw;
-  }
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.image-container div {
+  width: 100%;
+  height: 100vh;
+  background-color: #ccc;
+  margin-right: 10px;
+}
+
+.imggg img {
+  height: 80vh;
+  width: 100vw;
+}
 
 .img-con {
-    height: 70vh;
-    width: 50vw;
-    overflow: hidden;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: [col1-start] 30vh  [col2-start] 20vh  [col3-start] 50vh [col3-end];
-    grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
-    color: #444;
+  height: 80vh;
+  width: 50vw;
+  overflow: hidden;
+  display: contents;
+  grid-gap: 10px;
+  grid-template-columns: [col1-start] 30vh [col2-start] 20vh [col3-start] 50vh [col3-end];
+  grid-template-rows: [row1-start] auto [row2-start] auto [row2-end];
+  color: #444;
 }
 
-.img_1{
-    grid-column: col1-start / col3-start;
-    grid-row: row1-start ;
+.img_1 {
+  grid-column: col1-start / col3-start;
+  grid-row: row1-start;
 }
 
-.img_2{
-    grid-column: col3-start ;
-    grid-row: row1-start / row2-end;
+.img_2 {
+  grid-column: col3-start;
+  grid-row: row1-start / row2-end;
 }
 
 .img_3 {
-    grid-column: col1-start /col3-start;
-    grid-row: row2-start ;
+  grid-column: col1-start / col3-start;
+  grid-row: row2-start;
 }
 
-
 .p-con {
-    position: absolute;
-    top: 10vh;
-    left: 50vw;
-    line-height: 1;
-    background-color: rgba(231, 231, 231, 0.7);
-    height: 40vh;
-    width: 30vw;
-    padding: 40px 35px;
+  position: absolute;
+  top: 30vh;
+  left: 30vw;
+  line-height: 1;
+  background-color: rgba(231, 231, 231, 0.7);
+  height: 40vh;
+  width: 30vw;
+  padding: 40px 35px;
 }
 
 .p-con h1 {
-    color: #000;
-    text-transform: uppercase;
-    font-size: 3vw;
-    line-height: 1;
-    margin-bottom: 30px;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 3vw;
+  line-height: 1;
+  margin-bottom: 30px;
 }
 
 .p-con p {
-    color: #000;
-    font-size: 16px;
+  color: #000;
+  font-size: 16px;
 }
 
-
-
-
-@media (max-width: 768px) { 
-    .news-title-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .news-title-container div h2 {
-        font-size: 5rem;
-    }
-    .news-title-container div {
-        margin: 0px 20px;
-    }
-    .news-title-container div p {
-        margin-top: 80px;
+@media (max-width: 768px) {
+  .news-title-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .news-title-container div h2 {
+    font-size: 5rem;
+  }
+  .news-title-container div {
+    margin: 0px 20px;
+  }
+  .news-title-container div p {
+    margin-top: 80px;
     text-align: justify;
     top: auto;
     width: auto;
-    }
-    .news-box-wrapper {
-        top: 0px;
-        margin: 0px;
-    }
-    .news-box-container {
-        margin: 10px 10px;
-        width: 100vw;
-    }
+  }
+  .news-box-wrapper {
+    top: 0px;
+    margin: 0px;
+  }
+  .news-box-container {
+    margin: 10px 10px;
+    width: 100vw;
+  }
 
-    .img-con {
-        grid-template-columns: [col1-start] 70px [col2-start] 70px [col3-start] 45vw [col3-end];
-        width: auto;
-    }
-    .p-con {
-        position: relative;
-        top: -20vh;
-        left: 10px;
-        line-height: 1;
-        background-color: rgba(231, 231, 231, 0.7);
-        height: auto;
-        width: 60vw;
-        padding: 20px 25px;
-    }
-
-
+  .img-con {
+    grid-template-columns: [col1-start] 70px [col2-start] 70px [col3-start] 45vw [col3-end];
+    width: auto;
+  }
+  .p-con {
+    position: relative;
+    top: -20vh;
+    left: 10px;
+    line-height: 1;
+    background-color: rgba(231, 231, 231, 0.7);
+    height: auto;
+    width: 60vw;
+    padding: 20px 25px;
+  }
 }

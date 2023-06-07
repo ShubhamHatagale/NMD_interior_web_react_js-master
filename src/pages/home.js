@@ -23,7 +23,7 @@ function Home() {
   const APIUrl = process.env.REACT_APP_Base_URL;
 
   const [bgcolor, setBgColor] = useState("white")
-  const [pagesData, setpagesData]=useState([])
+  const [pagesData, setpagesData] = useState([])
   const listenScrollEvent = e => {
     window.scrollY > 300
       ? setBgColor("#110A06")
@@ -35,7 +35,7 @@ function Home() {
     window.addEventListener("scroll", listenScrollEvent)
     GetPackageData()
 
-  },[])
+  }, [])
 
 
 

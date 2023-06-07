@@ -106,9 +106,14 @@ function News() {
                 <div className='news-box-container'>
                   <div>
                     <div className='img-con'>
-                      <img src={item.img0} alt="" className='img_1' />
-                      <img src={item.img1} alt="" className='img_2' />
-                      <img src={item.img2} alt="" className='img_3' /></div>
+
+                      {/* <img src={item.img0} alt="" className='img_1' /> */}
+                      <img className='img_2' src={`https://nmdinteriors.com/images/news/${item.image}`} alt="Blog Post" />
+                      {/* <img src={item.img1} alt="" className='img_3' /> */}
+
+                      {/* <img src={item.img2} alt="" className='img_3' /> */}
+                      
+                      </div>
 
                     <div className='p-con'>
                       <div>

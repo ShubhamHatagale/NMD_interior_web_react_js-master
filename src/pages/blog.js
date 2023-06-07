@@ -167,10 +167,11 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
                 {blogsData.map((blog, index) => (
                   <>
                     {index % 2 === 0 ? (<div className="blog-post">
+                    <div className='hr' ></div>
+
                       <div className="blog-post-content">
                         <h3>{blog.title}</h3>
                         <p>{blog.description}</p>
-                        {/* <p>{blog.description.substring(0, 1000)}</p> */}
                         <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
 
                       </div>
@@ -179,16 +180,17 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
                         <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
                       </div>
                     </div>) : <div className="blog-post">
-                      <div className="blog-post-image">
-                        <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
-                      </div>
-                      <div className="blog-post-content">
-                        <h3>{blog.title}</h3>
-                        <p>{blog.description}</p>
-                        <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
+                      <div className='hr' ></div>
 
-                        {/* <p>{blog.description.substring(0, 1000)}</p> */}
-                      </div>
+                        <div className="blog-post-image second_img">
+                          <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
+                        </div>
+                        <div className="blog-post-content ">
+                          <h3>{blog.title}</h3>
+                          <p>{blog.description}</p>
+                          <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
+
+                        </div>
                     </div>}
 
                   </>
@@ -237,6 +239,42 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
                   </div>}
                 </>
 
+              ))}
+
+            </section> */}
+
+
+            {/* <section className='blogs-box-wrapper' style={{ color: "white" }}>
+              {blogsData.map((blog, index) => (
+
+                <div className='blogs-box-container'>
+                  <div className='blogs-content-box'>
+                    <div className='blogs-image-box'>
+                      <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
+
+                    </div>
+                    <div className='blogs-desc-box'>
+                      <h3>{blog.title}</h3>
+                      <p>{blog.description}</p>
+                      <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
+                    </div>
+
+                  </div>
+                  <div className='blogs-content-box'>
+                    <div className='blogs-desc-box'>
+                    <h3>{blog.title}</h3>
+                      <p>{blog.description}</p>
+                      <button><BsArrowUpRightCircle color='#ccc' size={50} /></button>
+                    </div>
+                    <div className='blogs-image-box'>
+                    <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" />
+                    </div>
+                  </div>
+
+
+
+
+                </div>
               ))}
 
             </section> */}

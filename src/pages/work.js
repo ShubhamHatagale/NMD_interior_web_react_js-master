@@ -210,14 +210,25 @@ function Work() {
 
           {projectsData.map((item, key) => (
             <section className='project-box-wrapper'>
-              <div className='project-box-container'  onWheel={handleWheel}>
-                {products.map((product) => (
+              <div className='project-box-container' onWheel={handleWheel}>
+                {/* {products.map((product) => (
                   <div key={product.id} ref={containerRef}>
                     <img src={product.image} alt={product.name} />
+
                     <h3>{product.name}</h3>
                     <p>{product.price}</p>
                   </div>
-                ))}
+                ))} */}
+
+                {/* {console.log(item.title)} */}
+
+                <div key={item.id} ref={containerRef}>
+                  {/* <img src={product.image} alt={product.name} /> */}
+                  <img src={`https://nmdinteriors.com/images/projects/${item.title}/${item['images'].substring(0,5)}`} alt="Blog Post" />
+
+                  {/* <h3>{product.name}</h3>
+                    <p>{product.price}</p> */}
+                </div>
 
 
                 {/* <img src={image1} alt={products.name} /> */}
