@@ -94,7 +94,7 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
 
   const GetPackageData = () => {
 
-    console.log("yes")
+    // console.log("yes")
     var myHeaders = new Headers();
     var requestOptions = {
       method: 'GET',
@@ -104,7 +104,7 @@ Given all that, there are a lot of reasons behind green walls getting progressiv
     fetch(`${APIUrl}/api-blog.php`, requestOptions)
       .then(res => res.json())
       .then(result => {
-        console.log(result)
+        // console.log(result)
         setblogsData(result)
       })
   }

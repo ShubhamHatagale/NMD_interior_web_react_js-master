@@ -2,7 +2,7 @@ import '../css/main.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
 import { useMultiLayerPageReveal } from 'react-multilayer-page-reveal';
-import Logo from '../assets/img/logo.png'
+import Logo from '../assets/img/logob.png'
 
 function Header() {
 
@@ -41,7 +41,7 @@ function Header() {
                         {show ? (
 
                             <button onClick={changeState}>
-                                <Link to="/projects/nmd/navigation">
+                                <Link to="/dev/front_end/navigation">
                                     <svg viewBox="0 0 197 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 3H197M0 32H197" stroke-width="5" />
                                     </svg>
@@ -49,7 +49,7 @@ function Header() {
                             </button>
                         ) : (
                             <button onClick={changeState}>
-                                <Link to="/projects/nmd/">
+                                <Link to="/dev/front_end/">
                                     <svg viewBox="0 0 197 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M0 3H197M0 32H197" stroke-width="5" />
                                     </svg>

@@ -20,7 +20,7 @@ function News() {
 
   const GetPackageData = () => {
 
-    console.log("yes")
+    // console.log("yes")
     var myHeaders = new Headers();
     var requestOptions = {
       method: 'GET',
@@ -30,7 +30,7 @@ function News() {
     fetch(APIUrl + '/api-news.php', requestOptions)
       .then(res => res.json())
       .then(result => {
-        console.log(result)
+        // console.log(result)
         setnewsData(result)
       })
 

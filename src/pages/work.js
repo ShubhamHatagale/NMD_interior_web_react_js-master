@@ -174,21 +174,26 @@ function Work() {
   }, [])
 
 
+  const getImages = (imageString) => {
+    const imageArray = imageString.split(/\|\|/).filter(Boolean).map(image => image.replace(/^\|+|\|+$/g, ''));
+    return imageArray
+  };
+
 
 
   const GetPackageData = () => {
 
-    console.log("yes")
+    // console.log("yes")
     var myHeaders = new Headers();
     var requestOptions = {
       method: 'GET',
       headers: myHeaders,
       redirect: 'follow'
     }
-    fetch(`${APIUrl}/api-projects.php`, requestOptions)
+    fetch(`${APIUrl}/api-projects.php?function=data`, requestOptions)
       .then(res => res.json())
       .then(result => {
-        console.log(result)
+        // console.log(result)
         setprojectsData(result)
       })
 
@@ -211,24 +216,23 @@ function Work() {
           {projectsData.map((item, key) => (
             <section className='project-box-wrapper'>
               <div className='project-box-container' onWheel={handleWheel}>
-                {/* {products.map((product) => (
-                  <div key={product.id} ref={containerRef}>
-                    <img src={product.image} alt={product.name} />
+                {getImages(item.images).map((product) => (
+                  <div key={product} ref={containerRef}>
+                    <img src={`https://nmdinteriors.com/images/projects/${item.title}/${product}`} alt={product} />
 
                     <h3>{product.name}</h3>
                     <p>{product.price}</p>
                   </div>
-                ))} */}
+                ))}
 
-                {/* {console.log(item.title)} */}
+                {console.log(getImages(item.images))}
 
-                <div key={item.id} ref={containerRef}>
-                  {/* <img src={product.image} alt={product.name} /> */}
-                  <img src={`https://nmdinteriors.com/images/projects/${item.title}/${item['images'].substring(0,5)}`} alt="Blog Post" />
 
-                  {/* <h3>{product.name}</h3>
-                    <p>{product.price}</p> */}
-                </div>
+                {/* <div key={item.id} ref={containerRef}>
+                  <img src={`https://nmdinteriors.com/images/projects/${item.title}/${item['images'].substring(0, 5)}`} alt="Blog Post" />
+
+                 
+                </div> */}
 
 
                 {/* <img src={image1} alt={products.name} /> */}

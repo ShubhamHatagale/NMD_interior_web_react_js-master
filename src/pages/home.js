@@ -24,6 +24,8 @@ function Home() {
 
   const [bgcolor, setBgColor] = useState("white")
   const [pagesData, setpagesData] = useState([])
+  const [projectsData, setprojectsData] = useState([])
+
   const listenScrollEvent = e => {
     window.scrollY > 300
       ? setBgColor("#110A06")
@@ -34,6 +36,7 @@ function Home() {
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent)
     GetPackageData()
+    GetProjectData()
 
   }, [])
 
@@ -42,7 +45,7 @@ function Home() {
 
   const GetPackageData = () => {
 
-    console.log("yes")
+    // console.log("yes")
     var myHeaders = new Headers();
     var requestOptions = {
       method: 'GET',
@@ -52,12 +55,36 @@ function Home() {
     fetch(`${APIUrl}/api-pages.php`, requestOptions)
       .then(res => res.json())
       .then(result => {
-        console.log(result)
+        // console.log(result)
         setpagesData(result)
       })
 
   }
 
+  const getImages = (imageString) => {
+    const imageArray = imageString.split(/\|\|/).filter(Boolean).map(image => image.replace(/^\|+|\|+$/g, ''));
+    return imageArray
+  };
+
+
+
+  const GetProjectData = () => {
+
+    // console.log("yes")
+    var myHeaders = new Headers();
+    var requestOptions = {
+      method: 'GET',
+      headers: myHeaders,
+      redirect: 'follow'
+    }
+    fetch(`${APIUrl}/api-projects.php?function=latest_data`, requestOptions)
+      .then(res => res.json())
+      .then(result => {
+        // console.log(result)
+        setprojectsData(result)
+      })
+
+  }
 
   const parallax = useParallax({
     speed: -10,
@@ -205,39 +232,40 @@ function Home() {
                   </div>
                 </div>
 
-                <div className='project-list-container'>
+                {projectsData.length > 0 ? (<div className='project-list-container'>
                   <div className='project-image-wrapper'>
                     <Parallax speed={-10}>
                       <div className='project-image1'>
-                        <h1>Project Name</h1>
-                        <img src={ContentImg3} alt="" />
-
-                        <div class="overlay">
-
-                        </div>
+                        <h1>{projectsData[0].title}</h1>
+                        <img className='img_proj' src={`https://nmdinteriors.com/images/projects/${projectsData[0].title}/${projectsData[0]['images'].substring(0, 5)}`} alt="Blog Post" />
+                        <div class="overlay"></div>
                       </div>
+
                     </Parallax>
                     <div>
                     </div>
                     <div className='project-image3'>
                       <Parallax speed={-10}>
-                        <h1>Project Name</h1>
-                        <img src={ContentImg3} alt="" />
+                        <h1>{projectsData[1].title}</h1>
+                        <img className='img_proj' src={`https://nmdinteriors.com/images/projects/${projectsData[1].title}/${projectsData[1]['images'].substring(0, 5)}`} alt="Blog Post" />
                         <div class="overlay"></div>
+
                       </Parallax>
                       <div className='project-image2'>
                         <Parallax speed={20}>
-                          <h1>Project Name</h1>
-                          <img src={ContentImg3} alt="" />
+                          <h1>{projectsData[2].title}</h1>
+                          <img className='img_proj' src={`https://nmdinteriors.com/images/projects/${projectsData[2].title}/${projectsData[2]['images'].substring(0, 5)}`} alt="Blog Post" />
                           <div class="overlay"></div>
+
                         </Parallax>
                       </div>
                     </div>
                     <div className='project-image4'>
                       <Parallax speed={20}>
-                        <h1>Project Name</h1>
-                        <img src={ContentImg3} alt="" />
+                        <h1>{projectsData[3].title}</h1>
+                        <img className='img_proj' src={`https://nmdinteriors.com/images/projects/${projectsData[3].title}/${projectsData[3]['images'].substring(0, 5)}`} alt="Blog Post" />
                         <div class="overlay"></div>
+
                       </Parallax>
                     </div>
 
@@ -249,7 +277,7 @@ function Home() {
                       </h2>
                     </div>
                   </div>
-                </div>
+                </div>) : null}
               </section>
 
 
