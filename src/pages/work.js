@@ -146,7 +146,8 @@ function Work() {
   const containerRef = useRef(null);
 
   const handleWheel = (event) => {
-    event.preventDefault();
+    console.log("wheel scrolled")
+event.cancelable && event.preventDefault()
     const container = containerRef.current;
     container.scrollBy({
       left: event.deltaY > 0 ? 500 : -500,
@@ -215,9 +216,9 @@ function Work() {
 
           {projectsData.map((item, key) => (
             <section className='project-box-wrapper'>
-              <div className='project-box-container' onWheel={handleWheel}>
+              <div className='project-box-container' >
                 {getImages(item.images).map((product) => (
-                  <div key={product} ref={containerRef}>
+                  <div key={product} ref={containerRef} onWheel={handleWheel}>
                     <img src={`https://nmdinteriors.com/images/projects/${item.title}/${product}`} alt={product} />
 
                     <h3>{product.name}</h3>
@@ -225,19 +226,7 @@ function Work() {
                   </div>
                 ))}
 
-                {console.log(getImages(item.images))}
-
-
-                {/* <div key={item.id} ref={containerRef}>
-                  <img src={`https://nmdinteriors.com/images/projects/${item.title}/${item['images'].substring(0, 5)}`} alt="Blog Post" />
-
-                 
-                </div> */}
-
-
-                {/* <img src={image1} alt={products.name} /> */}
-
-                {/* <img src={`https://nmdinteriors.com/images/blog/${blog.image}`} alt="Blog Post" /> */}
+               
 
               </div>
 

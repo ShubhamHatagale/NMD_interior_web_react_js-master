@@ -90,20 +90,7 @@ function Home() {
     speed: -10,
   });
 
-  // const el = useRef();
-  // const q = gsap.utils.selector(el);
-  // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-  // useLayoutEffect(() => {
-  //   let smoother = ScrollSmoother.create({
-  //     smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
-  //     effects: true // looks for data-speed and data-lag attributes on elements
-  //   });
-  //   return () => {
-  //     smoother.kill();
-  //   };
-  // }, []);
-
+ 
 
 
   return (
@@ -198,23 +185,7 @@ function Home() {
                         {/* <p>{pagesData[0].description}</p> */}
 
                       </div>
-                      {/* <div className='purpose-links-container'>
-                        <div>
-                          <hr />
-                          <h4>Our Team</h4>
-                          <hr />
-                        </div>
-                        <div>
-                          <hr />
-                          <h4>Our Awards</h4>
-                          <hr />
-                        </div>
-                        <div>
-                          <hr />
-                          <h4>Our Culture</h4>
-                          <hr />
-                        </div>
-                      </div> */}
+                      
                     </div>
                   </div>
                 </div>
@@ -359,17 +330,7 @@ function Home() {
                           </div>
                         </div>
 
-                        {/* <div className="card">
-                        <div className="card-content">
-                          <div className="shine-animation">
-                            <FaAddressBook
-                              className="card-image"
-                            />
-                          </div>
-                          <span className="card-name">2</span>
-                          <span className="card-name">CITIES IN INDIA</span>
-                        </div>
-                      </div> */}
+                        
 
                       </div>
                       {/* <div className='purpose-links-container'>

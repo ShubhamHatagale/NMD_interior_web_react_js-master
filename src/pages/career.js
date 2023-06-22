@@ -28,43 +28,17 @@ function Career() {
                             </div>
 
                             <div className='career-available-positions'>
-                                {/* <h4>Available positions</h4>
-                            <div>
-                                <hr/>
-                                
-                                <h3>3D Designer</h3>
-                                <h5>Description</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
-                                <br/>
-                                
-                            </div>
-                        
-                            <div>
-                                <hr/>
-                                <h3>3D Designer</h3>
-                                <h5>Description</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
-                                
-                            </div> */}
-
+    
                                 <h4>WORK WITH US</h4>
                                 <div>
                                     <hr />
 
-                                    {/* <h3>3D Designer</h3>
-                                    <h5>Description</h5> */}
+                                    
                                     <p>Do you always receive compliments on your taste in interior decoration? Do wall paints, handcrafted furniture and decors catch your eye even in the most unlikely of places? Interior designers are constantly balancing their design decisions and their clients’ desires. It’s not a cakewalk, to say the least.If you are a design professional who can steer clients toward a favorable outcome while making them feel they are in full control of the design choices, we would certainly love to have on our team! Just drop your resume and portfolio with full details to careers@nmdinteriors.com and we will get in touch with you!</p>
                                     <br />
 
                                 </div>
 
-                                {/* <div>
-                                    <hr />
-                                    <h3>3D Designer</h3>
-                                    <h5>Description</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla consectetur dolor id magna feugiat, eu imperdiet lorem pretium. Mauris sit amet lorem quis est eleifend ornare. Donec porta ex ipsum, sed egestas sapien viverra ut. Integer nec lacus metus. Nam rutrum leo ut turpis blandit ultricies. Suspendisse rutrum nisl vel nulla sodales, sed sodales massa molestie. Pellentesque accumsan nec urna tincidunt auctor.</p>
-
-                                </div> */}
                             </div>
 
                             <div className='career-form-container'>

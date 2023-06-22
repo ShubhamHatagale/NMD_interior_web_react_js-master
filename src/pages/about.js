@@ -176,7 +176,7 @@ function About() {
             <section className='about-know-how-section'>
 
               <div className='about-know-flex-container'>
-                <div className='about-know-title-flex'> 
+                <div className='about-know-title-flex'>
                   <div>
                     <img src={Image.image3} alt='' className='responsive-image' />
                   </div>
