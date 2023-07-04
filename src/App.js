@@ -21,14 +21,14 @@ function App() {
       <ParallaxProvider>
         <Navbar />
         <Routes>
-          <Route path="/dev/front_end" element={<Home />} />
-          <Route path="/dev/front_end/about" element={<About />} />
-          <Route path="/dev/front_end/work" element={<Work />} />
-          <Route path="/dev/front_end/blog" element={<Blog />} />
-          <Route path="/dev/front_end/news" element={<News />} />
-          <Route path="/dev/front_end/career" element={<Career />} />
-          <Route path="/dev/front_end/contact" element={<Contact />} />
-          <Route path="/dev/front_end/navigation" element={<Navigation />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/navigation" element={<Navigation />} />
         </Routes>
       </ParallaxProvider>
     </>

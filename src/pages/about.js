@@ -205,7 +205,9 @@ function About() {
 
                 <div className='about-know-title-flex'>
                   <div>
-                    <img src={`https://nmdinteriors.com/images/about/about_20150603095831.jpg`} alt='' className='responsive-image' />
+                    {/* <img src={`https://nmdinteriors.com/images/about/about_20150603095831.jpg`} alt='' className='responsive-image' /> */}
+                    <img src={Image.image9} alt='' className='responsive-image' />
+
                   </div>
                 </div>
                 <div className='about-know-text-flex'>

@@ -2,7 +2,7 @@
   "name": "n_m_d",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nmdinteriors.com/dev/front_end/",
+  "homepage": "https://nmdinteriors.com/",
   "dependencies": {
     "@14islands/react-page-transitions": "^1.3.1",
     "@testing-library/jest-dom": "^5.16.5",

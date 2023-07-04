@@ -30,12 +30,12 @@ function Navigation() {
                 </div>
                 <div className='navigation-links-wrapper'>
                     <ul>
-                        <li><Link to="/dev/front_end/about">About</Link></li>
-                        <li><Link to="/dev/front_end/work">Work</Link></li>
-                        <li><Link to="/dev/front_end/blog">Blog</Link></li>
-                        <li><Link to="/dev/front_end/news">News</Link></li>
-                        <li><Link to="/dev/front_end/career">Career</Link></li>
-                        <li onClick={handleReveal}><Link to="/dev/front_end/contact">Contact</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/work">Work</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/news">News</Link></li>
+                        <li><Link to="/career">Career</Link></li>
+                        <li onClick={handleReveal}><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
             </div>

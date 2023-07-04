@@ -2,6 +2,12 @@
     display: flex;
 }
 
+.error{
+  color: red;
+  text-align: start;
+  /* margin-left: 5%; */
+}
+
 .contact-bg-img {
     width: 35%;
     height: 100%;
@@ -102,19 +108,22 @@
     font-size: 18px;
     color: #fff;
     margin: 20px 20px;
+    cursor: pointer;
 }
 
 .contact-details-container {
     margin: 50px 0px;
+    /* text-transform: capitalize; */
 }
 
 .contact-details-container div {
     margin: 40px 0px;
+    
 }
 
 .contact-details-container div h2 {
     font-size: 16px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 500;
     padding: 20px 0px;
     color: rgba(173, 120, 86, 1);
